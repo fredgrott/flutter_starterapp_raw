@@ -1,0 +1,6 @@
+{
+  "appTitle": "flutter_starterapp_raw",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
