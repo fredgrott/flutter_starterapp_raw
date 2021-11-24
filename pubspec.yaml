@@ -52,7 +52,7 @@ dev_dependencies:
   # code metrics
   dart_code_metrics: ^4.5.0
   # goldens
-  golden_toolkit: ^0.10.0
+  golden_toolkit: ^0.12.0
   # mocking
   mocktail: ^0.2.0
   # testing page object model
@@ -78,7 +78,6 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
-    - images/
     - google_fonts/
 # flutter intl for localization settings
 flutter_intl:

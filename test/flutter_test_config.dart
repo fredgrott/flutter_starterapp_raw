@@ -6,7 +6,7 @@ import 'dart:async';
 
 import 'package:golden_toolkit/golden_toolkit.dart';
 
-import 'golden_device_definitions.dart';
+import 'test_infrastructure/golden_device_definitions.dart';
 
 // flutter_test library uses a flutter_test_config file to use
 // the dart test package. See:
@@ -14,6 +14,13 @@ import 'golden_device_definitions.dart';
 //
 // Docs for the dart test package is at:
 // https://pub.dev/packages/test
+//
+//  Unit Tests organized into:
+//          Data
+//          Domain
+//          Presentation
+//          Test Infrastructure
+
 Future<void> testExecutable(FutureOr<void> Function() testMain) async {
   return GoldenToolkit.runWithConfiguration(
     () async {

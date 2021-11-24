@@ -8,6 +8,8 @@ import 'package:flutter_starterapp_raw/src/data/models/sample_list_model.dart';
 class SampleListDataSource implements BaseSampleListDataSource {
   List<int> items = [];
 
+  SampleListDataSource();
+
   @override
   Future<List<SampleItemModel>> getAllSampleItems() {
     return items as Future<List<SampleItemModel>>;
