@@ -3,10 +3,10 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_colors.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_colorschemes.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/materialbasedcupertinotheme.dart';
 
-ButtonThemeData materialLightButtonThemeData = ButtonThemeData(
+ButtonThemeData cupertinoLightButtonThemeData = ButtonThemeData(
   textTheme: ButtonTextTheme.primary,
   // ignore: avoid_redundant_argument_values
   minWidth: 88,
@@ -16,17 +16,17 @@ ButtonThemeData materialLightButtonThemeData = ButtonThemeData(
   // ignore: avoid_redundant_argument_values
   layoutBehavior: ButtonBarLayoutBehavior.padded,
   alignedDropdown: true,
-  splashColor: materialLightSurfaceColor,
-  highlightColor: materialLightSecondaryColor,
-  hoverColor: materialLightPrimaryColor,
-  focusColor: materialLightPrimaryVariantColor,
+  splashColor: cupertinoSurfaceColor,
+  highlightColor: cupertinoSecondaryColor,
+  hoverColor: cupertinoPrimaryColor,
+  focusColor: cupertinoPrimaryVariantColor,
   disabledColor: Colors.grey,
-  buttonColor: materialLightSecondaryVariantColor,
-  colorScheme: materialLightColorScheme,
+  buttonColor: cupertinoSecondaryVariantColor,
+  colorScheme: cupertinoColorScheme,
   materialTapTargetSize: MaterialTapTargetSize.padded,
 );
 
-ButtonThemeData materialHighContrastLightButtonThemeData = ButtonThemeData(
+ButtonThemeData cupertinoHighContrastLightButtonThemeData = ButtonThemeData(
   textTheme: ButtonTextTheme.primary,
   // ignore: avoid_redundant_argument_values
   minWidth: 88,
@@ -36,17 +36,17 @@ ButtonThemeData materialHighContrastLightButtonThemeData = ButtonThemeData(
   // ignore: avoid_redundant_argument_values
   layoutBehavior: ButtonBarLayoutBehavior.padded,
   alignedDropdown: true,
-  splashColor: materialHighContrastLightSurfaceColor,
-  highlightColor: materialHighContrastLightSecondaryColor,
-  hoverColor: materialHighContrastLightPrimaryColor,
-  focusColor: materialHighContrastLightPrimaryVariantColor,
+  splashColor: cupertinoSurfaceColor,
+  highlightColor: cupertinoSecondaryColor,
+  hoverColor: cupertinoPrimaryColor,
+  focusColor: cupertinoPrimaryVariantColor,
   disabledColor: Colors.grey,
-  buttonColor: materialHighContrastLightSecondaryVariantColor,
-  colorScheme: materialHighContrastLightColorScheme,
+  buttonColor: cupertinoSecondaryVariantColor,
+  colorScheme: cupertinoColorScheme,
   materialTapTargetSize: MaterialTapTargetSize.padded,
 );
 
-ButtonThemeData materialDarkButtonThemeData = ButtonThemeData(
+ButtonThemeData cupertinoDarkButtonThemeData = ButtonThemeData(
   textTheme: ButtonTextTheme.primary,
   // ignore: avoid_redundant_argument_values
   minWidth: 88,
@@ -56,17 +56,17 @@ ButtonThemeData materialDarkButtonThemeData = ButtonThemeData(
   // ignore: avoid_redundant_argument_values
   layoutBehavior: ButtonBarLayoutBehavior.padded,
   alignedDropdown: true,
-  splashColor: materialDarkSurfaceColor,
-  highlightColor: materialDarkSecondaryColor,
-  hoverColor: materialDarkPrimaryColor,
-  focusColor: materialDarkPrimaryVariantColor,
+  splashColor: cupertinoSurfaceColor,
+  highlightColor: cupertinoSecondaryColor,
+  hoverColor: cupertinoPrimaryColor,
+  focusColor: cupertinoPrimaryVariantColor,
   disabledColor: Colors.grey,
-  buttonColor: materialDarkSecondaryVariantColor,
-  colorScheme: materialDarkColorScheme,
+  buttonColor: cupertinoSecondaryVariantColor,
+  colorScheme: cupertinoColorScheme,
   materialTapTargetSize: MaterialTapTargetSize.padded,
 );
 
-ButtonThemeData materialHighContrastDarkButtonThemeData = ButtonThemeData(
+ButtonThemeData cupertinoHighContrastDarkButtonThemeData = ButtonThemeData(
   textTheme: ButtonTextTheme.primary,
   // ignore: avoid_redundant_argument_values
   minWidth: 88,
@@ -76,12 +76,12 @@ ButtonThemeData materialHighContrastDarkButtonThemeData = ButtonThemeData(
   // ignore: avoid_redundant_argument_values
   layoutBehavior: ButtonBarLayoutBehavior.padded,
   alignedDropdown: true,
-  splashColor: materialHighContrastDarkSurfaceColor,
-  highlightColor: materialHighContrastDarkSecondaryColor,
-  hoverColor: materialHighContrastDarkPrimaryColor,
-  focusColor: materialHighContrastDarkPrimaryVariantColor,
+  splashColor: cupertinoSurfaceColor,
+  highlightColor: cupertinoSecondaryColor,
+  hoverColor: cupertinoPrimaryColor,
+  focusColor: cupertinoPrimaryVariantColor,
   disabledColor: Colors.grey,
-  buttonColor: materialHighContrastDarkSecondaryVariantColor,
-  colorScheme: materialHighContrastDarkColorScheme,
+  buttonColor: cupertinoSecondaryVariantColor,
+  colorScheme: cupertinoColorScheme,
   materialTapTargetSize: MaterialTapTargetSize.padded,
 );

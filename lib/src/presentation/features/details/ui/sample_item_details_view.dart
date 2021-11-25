@@ -5,6 +5,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
 import 'package:lifecycle/lifecycle.dart';
 
 /// Displays detailed information about a SampleItem.
@@ -22,7 +23,8 @@ class SampleItemDetailsView extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Item Details'),
+          key: appBarKey,
+          title: const Text('Item Details', key: appBarTitleKey,),
         ),
         body: const Center(
           child: Text('More Information Here'),

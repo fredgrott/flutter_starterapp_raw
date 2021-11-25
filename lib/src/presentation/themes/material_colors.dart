@@ -18,6 +18,20 @@ Color materialLightOnSurfaceColor = Colors.black;
 Color materialLightOnBackgroundColor = Colors.black;
 Color materialLightOnErrorColor = Colors.white;
 
+// High Contrast Light
+Color materialHighContrastLightPrimaryColor = const Color(0xff0000ba);
+Color materialHighContrastLightPrimaryVariantColor = const Color(0xff000088);
+Color materialHighContrastLightSecondaryColor = const Color(0xff66fff9);
+Color materialHighContrastLightSecondaryVariantColor = const Color(0xff018786);
+Color materialHighContrastLightSurfaceColor = Colors.white;
+Color materialHighContrastLightBackgroundColor = Colors.white;
+Color materialHighContrastLightErrorColor = const Color(0xff790000);
+Color materialHighContrastLightOnPrimaryColor = Colors.white;
+Color materialHighContrastLightOnSecondaryColor = Colors.black;
+Color materialHighContrastLightOnSurfaceColor = Colors.black;
+Color materialHighContrastLightOnBackgroundColor = Colors.black;
+Color materialHighContrastLightOnErrorColor = Colors.white;
+
 // Dark
 Color materialDarkPrimaryColor = const Color(0xffbb86fc);
 Color materialDarkPrimaryVariantColor = const Color(0xff3700B3);
@@ -31,3 +45,17 @@ Color materialDarkOnSecondaryColor = Colors.black;
 Color materialDarkOnSurfaceColor = Colors.white;
 Color materialDarkOnBackgroundColor = Colors.white;
 Color materialDarkOnErrorColor = Colors.black;
+
+// High Contrast Dark
+Color materialHighContrastDarkPrimaryColor = const Color(0xffefb7ff);
+Color materialHighContrastDarkPrimaryVariantColor = const Color(0xffbe9eff);
+Color materialHighContrastDarkSecondaryColor = const Color(0xff66fff9);
+Color materialHighContrastDarkSecondaryVariantColor = const Color(0xff66fff9);
+Color materialHighContrastDarkSurfaceColor = const Color(0xff121212);
+Color materialHighContrastDarkBackgroundColor = const Color(0xff121212);
+Color materialHighContrastDarkErrorColor = const Color(0xff9b374d);
+Color materialHighContrastDarkOnPrimaryColor = Colors.black;
+Color materialHighContrastDarkOnSecondaryColor = Colors.black;
+Color materialHighContrastDarkOnSurfaceColor = Colors.white;
+Color materialHighContrastDarkOnBackgroundColor = Colors.white;
+Color materialHighContrastDarkOnErrorColor = Colors.black;

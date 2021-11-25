@@ -21,7 +21,7 @@ dependencies:
   # custom fonts
   equatable: ^2.0.3
   dartz: ^0.10.0
-  flutter_platform_widgets: ^1.10.0
+  flutter_platform_widgets: ^1.11.1
   lifecycle: ^0.4.1
   logging: ^1.0.2
   logging_appenders: ^1.0.0

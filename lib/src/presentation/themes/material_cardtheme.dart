@@ -13,7 +13,17 @@ CardTheme materialLightCardTheme = CardTheme(
 
 );
 
+CardTheme materialHighContrastLightCardTheme = CardTheme(
+  color: materialHighContrastLightSurfaceColor,
+  shadowColor: materialHighContrastLightPrimaryColor,
+);
+
 CardTheme materialDarkCardTheme = CardTheme(
   color: materialDarkSurfaceColor,
   shadowColor: materialLightPrimaryColor,
+);
+
+CardTheme materialHighContrastDarkCardTheme = CardTheme(
+  color: materialHighContrastDarkSurfaceColor,
+  shadowColor: materialHighContrastLightPrimaryColor,
 );

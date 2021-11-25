@@ -5,7 +5,9 @@
 import 'dart:async';
 
 import 'package:catcher/core/catcher.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_build_modes.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_catch_exceptions.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_vars.dart';
@@ -20,9 +22,20 @@ import 'src/presentation/features/settings/services/settings_service.dart';
 // compile(run) -t main_dev.dart
 void mainDelegate() => main();
 
+// ignore: long-method
 Future<void> main() async {
   // Ensures the Flutter Sky Engine is fully initialized
   WidgetsFlutterBinding.ensureInitialized();
+
+// to get license as needed when you use custom fonts
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(
+      ['google_fonts'],
+      license,
+    );
+  });
+
 
   // Set up the SettingsController, which will glue user settings to multiple
   // Flutter Widgets.

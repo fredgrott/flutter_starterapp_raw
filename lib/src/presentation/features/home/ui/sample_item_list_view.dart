@@ -5,11 +5,12 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
 import 'package:lifecycle/lifecycle.dart';
 
-import '../../settings/ui/settings_view.dart';
 import '../../../../domain/entity/sample_item.dart';
 import '../../details/ui/sample_item_details_view.dart';
+import '../../settings/ui/settings_view.dart';
 
 /// Displays a list of SampleItems.
 class SampleItemListView extends StatelessWidget {
@@ -35,7 +36,8 @@ class SampleItemListView extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Sample Items'),
+          key: appBarKey,
+          title: const Text('Sample Items', key: appBarTitleKey,),
           actions: [
             IconButton(
               icon: const Icon(Icons.settings),
@@ -77,7 +79,8 @@ class SampleItemListView extends StatelessWidget {
               // ignore: avoid_redundant_argument_values
               wantKeepAlive: false,
               child: ListTile(
-                title: Text('SampleItem ${item.id}'),
+                key: listTileKey,
+                title: Text('SampleItem ${item.id}', key: tileTitleKey,),
                 leading: const CircleAvatar(
                   // Display the Flutter Logo image asset.
                   foregroundImage: AssetImage('assets/images/flutter_logo.png'),

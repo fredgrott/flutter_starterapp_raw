@@ -5,12 +5,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_colors.dart';
 
-
-
 IconThemeData materialLightActionsIconThemeData = IconThemeData(
   color: materialLightSecondaryColor,
 );
 
+IconThemeData materialHighContrastLightActionsIconThemeData = IconThemeData(
+  color: materialHighContrastLightSecondaryColor,
+);
+
 IconThemeData materialDarkActionsIconThemeData = IconThemeData(
   color: materialDarkSecondaryColor,
+);
+
+IconThemeData materialHighContrastDarkActionsIconThemeData = IconThemeData(
+  color: materialHighContrastDarkSecondaryColor,
 );

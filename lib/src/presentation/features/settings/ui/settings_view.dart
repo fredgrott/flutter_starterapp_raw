@@ -5,6 +5,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
 import 'package:lifecycle/lifecycle.dart';
 
 import '../controllers/settings_controller.dart';
@@ -32,7 +33,8 @@ class SettingsView extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Settings'),
+          key: appBarKey,
+          title: const Text('Settings', key: appBarTitleKey,),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16),

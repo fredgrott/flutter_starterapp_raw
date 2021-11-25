@@ -7,6 +7,7 @@ import 'dart:developer';
 import 'package:catcher/core/catcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
 import 'package:flutter_starterapp_raw/src/localization_gen/l10n.dart';
 import 'package:lifecycle/lifecycle.dart';
 
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
             log("App: ${event.toString()}");
           },
           child: MaterialApp(
+            key: appKey,
             debugShowCheckedModeBanner: false,
 
             navigatorKey: Catcher.navigatorKey,

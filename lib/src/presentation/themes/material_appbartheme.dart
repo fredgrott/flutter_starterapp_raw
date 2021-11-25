@@ -3,11 +3,10 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_actionsiconthemedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_actions_icon_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_colors.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_iconthemedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_icon_themedata.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 
 AppBarTheme materialLightAppBarTheme = AppBarTheme(
   //brightness:
@@ -22,6 +21,17 @@ AppBarTheme materialLightAppBarTheme = AppBarTheme(
   toolbarTextStyle: materialAppBarToolbarTextStyle,
 );
 
+AppBarTheme materialHighContrastLightAppBarTheme = AppBarTheme(
+  backgroundColor: materialHighContrastLightPrimaryColor,
+  shadowColor: materialHighContrastLightPrimaryVariantColor,
+  centerTitle: true,
+  titleSpacing: 1,
+  iconTheme: materialHighContrastLightIconThemeData,
+  actionsIconTheme: materialHighContrastLightActionsIconThemeData,
+  titleTextStyle: materialAppBarTitleTextStyle,
+  toolbarTextStyle: materialAppBarToolbarTextStyle,
+);
+
 AppBarTheme materialDarkAppBarTheme = AppBarTheme(
   backgroundColor: materialDarkPrimaryColor,
   shadowColor: materialDarkPrimaryVariantColor,
@@ -29,6 +39,17 @@ AppBarTheme materialDarkAppBarTheme = AppBarTheme(
   titleSpacing: 1,
   iconTheme: materialDarkIconThemeData,
   actionsIconTheme: materialDarkActionsIconThemeData,
+  titleTextStyle: materialAppBarTitleTextStyle,
+  toolbarTextStyle: materialAppBarToolbarTextStyle,
+);
+
+AppBarTheme materialHighContrastDarkAppBarTheme = AppBarTheme(
+  backgroundColor: materialHighContrastDarkPrimaryColor,
+  shadowColor: materialHighContrastDarkPrimaryVariantColor,
+  centerTitle: true,
+  titleSpacing: 1,
+  iconTheme: materialHighContrastDarkIconThemeData,
+  actionsIconTheme: materialHighContrastDarkActionsIconThemeData,
   titleTextStyle: materialAppBarTitleTextStyle,
   toolbarTextStyle: materialAppBarToolbarTextStyle,
 );
