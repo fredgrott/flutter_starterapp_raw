@@ -6,6 +6,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
+
 import 'package:lifecycle/lifecycle.dart';
 
 import '../controllers/settings_controller.dart';
@@ -36,33 +37,37 @@ class SettingsView extends StatelessWidget {
           key: appBarKey,
           title: const Text('Settings', key: appBarTitleKey,),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(16),
-          // Glue the SettingsController to the theme selection DropdownButton.
-          //
-          // When a user selects a theme from the dropdown list, the
-          // SettingsController is updated, which rebuilds the MaterialApp.
+        // So we can theme the dropdown with color and shape
+        body: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5,),
+          decoration: BoxDecoration(
+                        color: Colors.blue[100],
+                        borderRadius: const BorderRadius.all(Radius.circular(20)),
+                      ),
           child: DropdownButton<ThemeMode>(
-            // Read the selected themeMode from the controller
-            value: controller.themeMode,
-            // Call the updateThemeMode method any time the user selects a theme.
-            onChanged: controller.updateThemeMode,
-            items: const [
-              DropdownMenuItem(
-                value: ThemeMode.system,
-                child: Text('System Theme'),
-              ),
-              DropdownMenuItem(
-                value: ThemeMode.light,
-                child: Text('Light Theme'),
-              ),
-              DropdownMenuItem(
-                value: ThemeMode.dark,
-                child: Text('Dark Theme'),
-              ),
-            ],
-          ),
+          // Read the selected themeMode from the controller
+          value: controller.themeMode,
+          // Call the updateThemeMode method any time the user selects a theme.
+          onChanged: controller.updateThemeMode,
+          items: const [
+            DropdownMenuItem(
+              value: ThemeMode.system,
+              child: Text('System Theme'),
+            ),
+            DropdownMenuItem(
+              value: ThemeMode.light,
+              child: Text('Light Theme'),
+            ),
+            DropdownMenuItem(
+              value: ThemeMode.dark,
+              child: Text('Dark Theme'),
+            ),
+          ],
         ),
+      ),
+          
+      
+    
       ),
     );
   }

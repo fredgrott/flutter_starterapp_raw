@@ -5,17 +5,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_appbartheme.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_bottom_navigation_bar_theme_data.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_buttonthemedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_bottom_navigation_bar_themedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_button_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_cardtheme.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_chip_themedata.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_colorschemes.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_drawer_theme.dart';
+
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_drawer_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_icon_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_listtile_theme.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_navigation_bar_theme_data.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_navigation_rail_theme_data.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_navigation_bar_themedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_navigation_rail_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_scrollbar_themedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_slider_theme.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_tab_bar_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_texttheme.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_toggle_button_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_typography.dart';
 
 // Gist: Two ways to map the very lite Cupertino Themes into the Material ThemeData.
@@ -47,6 +53,35 @@ ThemeData materialLightMaterialThemeData = ThemeData(
   iconTheme: materialLightIconThemeData,
   applyElevationOverlayColor: true,
   scrollbarTheme: materialLightScrollbarThemeData,
+  toggleButtonsTheme: materialLightToggleButtonThemeData,
+  sliderTheme: materialLightSliderThemeData,
+  chipTheme: materialLightChipThemeData,
+  tabBarTheme: materialLightTabbarTheme,
+  shadowColor: Colors.black,
+  splashColor: const Color(0x66C8C8C8),
+  scaffoldBackgroundColor: Colors.grey[50],
+  canvasColor: Colors.grey[50],
+  focusColor: Colors.black.withOpacity(0.12),
+  highlightColor: const Color(0x66BCBCBC),
+  hoverColor: Colors.black.withOpacity(0.04),
+  disabledColor: Colors.black38,
+  backgroundColor: Colors.grey[700],
+  bottomAppBarColor: Colors.white,
+  cardColor: Colors.white,
+  dividerColor: const Color(0x1F000000),
+  selectedRowColor: Colors.grey[100],
+  unselectedWidgetColor: Colors.black54,
+  secondaryHeaderColor: Colors.blue[50],
+  dialogBackgroundColor: Colors.white,
+  hintColor: Colors.black.withOpacity(0.6),
+  errorColor: Colors.red[700],
+  primarySwatch: Colors.blue,
+  primaryColorLight: Colors.blue,
+  primaryColorDark:  Colors.blue[700],
+  toggleableActiveColor: Colors.blue[500],
+  indicatorColor: Colors.blue[500],
+  
+
 );
 
 ThemeData materialHighContrastLightMaterialThemeData = ThemeData(
@@ -63,12 +98,36 @@ ThemeData materialHighContrastLightMaterialThemeData = ThemeData(
   drawerTheme: materialHighContrastLightDrawerThemeData,
   navigationRailTheme: materialHighContrastLightNavigationRailThemeData,
   navigationBarTheme: materialHighContrastLightNavigationBarThemeData,
-  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  materialTapTargetSize: MaterialTapTargetSize.padded,
   bottomNavigationBarTheme: materialHighContrastLightBottomNavigationBarThemeData,
   androidOverscrollIndicator: AndroidOverscrollIndicator.glow,
   iconTheme: materialHighContrastLightIconThemeData,
   applyElevationOverlayColor: true,
   scrollbarTheme: materialHighContrastLightScrollbarThemeData,
+  toggleButtonsTheme: materialHighContrastLightToggleButtonThemeData,
+  sliderTheme: materialHighContrastLightSliderThemeData,
+  chipTheme: materialHighContrastLightChipThemeData,
+  tabBarTheme: materialHighContrastLightTabbarTheme,
+  shadowColor: Colors.black,
+  splashColor: const Color(0x40CCCCCC),
+  scaffoldBackgroundColor: Colors.grey[850],
+  canvasColor: Colors.grey[850],
+  focusColor: Colors.white.withOpacity(0.12),
+  highlightColor: const Color(0x40CCCCCC),
+  hoverColor: Colors.white.withOpacity(0.04),
+  disabledColor: Colors.black38,
+  backgroundColor: Colors.grey[700],
+  bottomAppBarColor: Colors.grey[800],
+  cardColor: Colors.grey[800],
+  dividerColor: const Color(0x1FFFFFFF),
+  selectedRowColor: Colors.grey[100],
+  unselectedWidgetColor: Colors.white70,
+  secondaryHeaderColor: Colors.grey[700],
+  dialogBackgroundColor: Colors.grey[800],
+  hintColor: Colors.white60,
+  errorColor: Colors.red[700],
+  toggleableActiveColor: Colors.blue[500],
+  indicatorColor: Colors.blue[500],
 );
 
 ThemeData materialDarkMaterialThemeData = ThemeData(
@@ -92,6 +151,34 @@ ThemeData materialDarkMaterialThemeData = ThemeData(
   iconTheme: materialDarkIconThemeData,
   applyElevationOverlayColor: true,
   scrollbarTheme: materialDarkScrollbarThemeData,
+  toggleButtonsTheme: materialDarkToggleButtonThemeData,
+  sliderTheme: materialDarkSliderThemeData,
+  chipTheme: materialDarkChipThemeData,
+  tabBarTheme: materialDarkTabbarTheme,
+  shadowColor: Colors.black,
+  splashColor: const Color(0x66C8C8C8),
+  scaffoldBackgroundColor: Colors.grey[50],
+  canvasColor: Colors.grey[50],
+  focusColor: Colors.white.withOpacity(0.12),
+  highlightColor: const Color(0x66BCBCBC),
+  hoverColor: Colors.white.withOpacity(0.04),
+  disabledColor: Colors.black38,
+  backgroundColor: Colors.blue[200],
+  bottomAppBarColor: Colors.white,
+  cardColor: Colors.white,
+  dividerColor: const Color(0x1FFFFFFF),
+  selectedRowColor: Colors.grey[100],
+  unselectedWidgetColor: Colors.black54,
+  secondaryHeaderColor: Colors.blue[50],
+  dialogBackgroundColor: Colors.white,
+  hintColor: Colors.white60,
+  errorColor: Colors.red[700],
+  primarySwatch: Colors.blue,
+  primaryColorLight: Colors.blue,
+  primaryColorDark: Colors.blue[700],
+  toggleableActiveColor: Colors.tealAccent[200],
+  indicatorColor: Colors.tealAccent[200],
+
 );
 
 ThemeData materialHighContrastDarkMaterialThemeData = ThemeData(
@@ -114,4 +201,31 @@ ThemeData materialHighContrastDarkMaterialThemeData = ThemeData(
   iconTheme: materialHighContrastDarkIconThemeData,
   applyElevationOverlayColor: true,
   scrollbarTheme: materialHighContrastDarkScrollbarThemeData,
+  toggleButtonsTheme: materialHighContrastDarkToggleButtonThemeData,
+  sliderTheme: materialHighContrastDarkSliderThemeData,
+  chipTheme: materialHighContrastDarkChipThemeData,
+  tabBarTheme: materialHighContrastDarkTabbarTheme,
+  shadowColor: Colors.black,
+  splashColor: const Color(0x40CCCCCC),
+  scaffoldBackgroundColor: Colors.grey[850],
+  canvasColor: Colors.grey[850],
+  focusColor: Colors.white.withOpacity(0.12),
+  highlightColor: const Color(0x40CCCCCC),
+  hoverColor: Colors.white.withOpacity(0.04),
+  disabledColor: Colors.black38,
+  backgroundColor: Colors.grey[700],
+  bottomAppBarColor: Colors.grey[800],
+  cardColor: Colors.grey[800],
+  dividerColor: const Color(0x1FFFFFFF),
+  selectedRowColor: Colors.grey[100],
+  unselectedWidgetColor: Colors.white70,
+  secondaryHeaderColor: Colors.grey[700],
+  dialogBackgroundColor: Colors.grey[800],
+  hintColor: Colors.white60,
+  errorColor: Colors.red[700],
+  primarySwatch: Colors.blue,
+  primaryColorLight: Colors.blue,
+  primaryColorDark: Colors.blue[700],
+  toggleableActiveColor: Colors.tealAccent[200],
+  indicatorColor: Colors.tealAccent[200],
 );

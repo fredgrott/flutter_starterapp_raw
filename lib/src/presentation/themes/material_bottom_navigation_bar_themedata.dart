@@ -4,10 +4,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_colors.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_navigation_rail_theme_data.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_navigation_rail_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_selected_label_style.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_unseleced_label_style.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_unselected_icon_theme_data.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_unselected_icon_themedata.dart';
 
 BottomNavigationBarThemeData materialLightBottomNavigationBarThemeData =
     BottomNavigationBarThemeData(

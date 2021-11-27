@@ -5,9 +5,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_colors.dart';
 
-DrawerThemeData cupertinoLightDrawerThemeData = DrawerThemeData(
-  backgroundColor: cupertinoSecondaryVariantColor,
-  scrimColor: cupertinoPrimaryVariantColor,
-  elevation: 2,
+NavigationBarThemeData cupertinoLightNavigationBarThemeData =
+    NavigationBarThemeData(
+  height: 56,
+  backgroundColor: cupertinoPrimaryColor,
+  indicatorColor: cupertinoSecondaryColor,
+  labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
 );
 

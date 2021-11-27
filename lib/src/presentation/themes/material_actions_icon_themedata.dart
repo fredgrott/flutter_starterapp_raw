@@ -7,16 +7,24 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/material_colors.d
 
 IconThemeData materialLightActionsIconThemeData = IconThemeData(
   color: materialLightSecondaryColor,
+  opacity: 0.0,
+  size: 12,
 );
 
 IconThemeData materialHighContrastLightActionsIconThemeData = IconThemeData(
   color: materialHighContrastLightSecondaryColor,
+  opacity: 0.0,
+  size: 12,
 );
 
 IconThemeData materialDarkActionsIconThemeData = IconThemeData(
   color: materialDarkSecondaryColor,
+  opacity: 0.0,
+  size: 12,
 );
 
 IconThemeData materialHighContrastDarkActionsIconThemeData = IconThemeData(
   color: materialHighContrastDarkSecondaryColor,
+  opacity: 0.0,
+  size: 12,
 );

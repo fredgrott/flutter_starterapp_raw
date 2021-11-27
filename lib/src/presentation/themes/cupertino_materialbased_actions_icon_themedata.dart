@@ -9,14 +9,3 @@ IconThemeData cupertinoLightActionsIconThemeData = IconThemeData(
   color: cupertinoSecondaryColor,
 );
 
-IconThemeData cupertinoHighContrastLightActionsIconThemeData = IconThemeData(
-  color: cupertinoSecondaryColor,
-);
-
-IconThemeData cupertinoDarkActionsIconThemeData = IconThemeData(
-  color: cupertinoSecondaryColor,
-);
-
-IconThemeData cupertinoHighContrastDarkActionsIconThemeData = IconThemeData(
-  color: cupertinoSecondaryColor,
-);

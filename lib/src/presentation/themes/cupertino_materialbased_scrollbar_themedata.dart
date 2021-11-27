@@ -3,10 +3,11 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_colors.dart';
 
-CardTheme cupertinoLightCardTheme = CardTheme(
-  color: cupertinoSurfaceColor,
-  shadowColor: cupertinoPrimaryColor,
+ScrollbarThemeData cupertinoLightScrollbarThemeData = const ScrollbarThemeData(
+  showTrackOnHover: true,
+  isAlwaysShown: true,
+  radius: Radius.circular(5),
+  minThumbLength: 2,
+  interactive: true,
 );
-
