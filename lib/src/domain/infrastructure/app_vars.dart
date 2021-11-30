@@ -2,11 +2,17 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-import 'package:flutter/widgets.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/scheduler.dart';
 
-// To track certain navigations and deliver app exception
-// reports we need a navigatorKe.
-final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+Brightness appBrightness = Brightness.light;
+
+bool isDark() {
+  var brightness = SchedulerBinding.instance!.window.platformBrightness;
+  final bool isDarkMode = brightness == Brightness.dark;
+
+  return isDarkMode;
+}
 
 String catcherEmailAddyOne = "email1@email.com";
 

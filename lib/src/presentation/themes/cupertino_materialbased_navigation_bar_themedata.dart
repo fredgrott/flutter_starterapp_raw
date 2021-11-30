@@ -12,4 +12,3 @@ NavigationBarThemeData cupertinoLightNavigationBarThemeData =
   indicatorColor: cupertinoSecondaryColor,
   labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
 );
-

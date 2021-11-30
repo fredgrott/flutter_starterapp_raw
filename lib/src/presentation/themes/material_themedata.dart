@@ -3,12 +3,12 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_themedata.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_appbartheme.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_bottom_navigation_bar_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_button_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_cardtheme.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_chip_themedata.dart';
+
 
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_colorschemes.dart';
 
@@ -31,10 +31,19 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/material_typograp
 //       CupertinoAppData. And the Cupertino Themes always use CupertinoDynamicColor
 //       to compute the four color values for the four themes on Apple devices.
 
+// Items That Are AutoConfigured That Do NOT NEED SET:
+//         MaterialTapTargetSize is auto set to padded for android and desktop non apple
+//         applyElevationOverlayColor is set to false
+//         pageTransitionsTheme is set to platform defaults
+//         useMaterial3 is set to false
+
 ThemeData materialLightMaterialThemeData = ThemeData(
+  
+  
   // only required if we are doing non default Cupertino colors of primary, primarycontrast,etc.
   //cupertinoOverrideTheme: noDefaultCupertinoThemeData,
-  cupertinoOverrideTheme: cupertinoThemeData,
+  //cupertinoOverrideTheme: cupertinoThemeData,
+  
   colorScheme: materialLightColorScheme,
   typography: materialTypography,
   appBarTheme: materialLightAppBarTheme,
@@ -47,15 +56,17 @@ ThemeData materialLightMaterialThemeData = ThemeData(
   drawerTheme: materialLightDrawerThemeData,
   navigationRailTheme: materialLightNavigationRailThemeData,
   navigationBarTheme: materialLightNavigationBarThemeData,
-  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  
+  
   bottomNavigationBarTheme: materialLightBottomNavigationBarThemeData,
   androidOverscrollIndicator: AndroidOverscrollIndicator.glow,
   iconTheme: materialLightIconThemeData,
-  applyElevationOverlayColor: true,
+  // default is false
+  applyElevationOverlayColor: false,
   scrollbarTheme: materialLightScrollbarThemeData,
   toggleButtonsTheme: materialLightToggleButtonThemeData,
   sliderTheme: materialLightSliderThemeData,
-  chipTheme: materialLightChipThemeData,
+  
   tabBarTheme: materialLightTabbarTheme,
   shadowColor: Colors.black,
   splashColor: const Color(0x66C8C8C8),
@@ -75,9 +86,7 @@ ThemeData materialLightMaterialThemeData = ThemeData(
   dialogBackgroundColor: Colors.white,
   hintColor: Colors.black.withOpacity(0.6),
   errorColor: Colors.red[700],
-  primarySwatch: Colors.blue,
-  primaryColorLight: Colors.blue,
-  primaryColorDark:  Colors.blue[700],
+  
   toggleableActiveColor: Colors.blue[500],
   indicatorColor: Colors.blue[500],
   
@@ -85,7 +94,7 @@ ThemeData materialLightMaterialThemeData = ThemeData(
 );
 
 ThemeData materialHighContrastLightMaterialThemeData = ThemeData(
-  cupertinoOverrideTheme: cupertinoThemeData,
+  //cupertinoOverrideTheme: cupertinoThemeData,
   colorScheme: materialHighContrastLightColorScheme,
   typography: materialTypography,
   appBarTheme: materialLightAppBarTheme,
@@ -98,15 +107,15 @@ ThemeData materialHighContrastLightMaterialThemeData = ThemeData(
   drawerTheme: materialHighContrastLightDrawerThemeData,
   navigationRailTheme: materialHighContrastLightNavigationRailThemeData,
   navigationBarTheme: materialHighContrastLightNavigationBarThemeData,
-  materialTapTargetSize: MaterialTapTargetSize.padded,
+  
   bottomNavigationBarTheme: materialHighContrastLightBottomNavigationBarThemeData,
   androidOverscrollIndicator: AndroidOverscrollIndicator.glow,
   iconTheme: materialHighContrastLightIconThemeData,
-  applyElevationOverlayColor: true,
+  applyElevationOverlayColor: false,
   scrollbarTheme: materialHighContrastLightScrollbarThemeData,
   toggleButtonsTheme: materialHighContrastLightToggleButtonThemeData,
   sliderTheme: materialHighContrastLightSliderThemeData,
-  chipTheme: materialHighContrastLightChipThemeData,
+  
   tabBarTheme: materialHighContrastLightTabbarTheme,
   shadowColor: Colors.black,
   splashColor: const Color(0x40CCCCCC),
@@ -132,7 +141,7 @@ ThemeData materialHighContrastLightMaterialThemeData = ThemeData(
 
 ThemeData materialDarkMaterialThemeData = ThemeData(
   // only required if we are doing non default Cupertino colors of primary, primarycontrast,etc.
-  cupertinoOverrideTheme: cupertinoThemeData,
+  //cupertinoOverrideTheme: cupertinoThemeData,
   colorScheme: materialDarkColorScheme,
   typography: materialTypography,
   appBarTheme: materialDarkAppBarTheme,
@@ -145,15 +154,15 @@ ThemeData materialDarkMaterialThemeData = ThemeData(
   drawerTheme: materialDarkDrawerThemeData,
   navigationRailTheme: materialDarkNavigationRailThemeData,
   navigationBarTheme: materialDarkNavigationBarThemeData,
-  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  materialTapTargetSize: MaterialTapTargetSize.padded,
   bottomNavigationBarTheme: materialDarkBottomNavigationBarThemeData,
   androidOverscrollIndicator: AndroidOverscrollIndicator.glow,
   iconTheme: materialDarkIconThemeData,
-  applyElevationOverlayColor: true,
+  applyElevationOverlayColor: false,
   scrollbarTheme: materialDarkScrollbarThemeData,
   toggleButtonsTheme: materialDarkToggleButtonThemeData,
   sliderTheme: materialDarkSliderThemeData,
-  chipTheme: materialDarkChipThemeData,
+  
   tabBarTheme: materialDarkTabbarTheme,
   shadowColor: Colors.black,
   splashColor: const Color(0x66C8C8C8),
@@ -173,16 +182,14 @@ ThemeData materialDarkMaterialThemeData = ThemeData(
   dialogBackgroundColor: Colors.white,
   hintColor: Colors.white60,
   errorColor: Colors.red[700],
-  primarySwatch: Colors.blue,
-  primaryColorLight: Colors.blue,
-  primaryColorDark: Colors.blue[700],
+  
   toggleableActiveColor: Colors.tealAccent[200],
   indicatorColor: Colors.tealAccent[200],
 
 );
 
 ThemeData materialHighContrastDarkMaterialThemeData = ThemeData(
-  cupertinoOverrideTheme: cupertinoThemeData,
+  //cupertinoOverrideTheme: cupertinoThemeData,
   colorScheme: materialHighContrastDarkColorScheme,
   typography: materialTypography,
   appBarTheme: materialDarkAppBarTheme,
@@ -195,15 +202,15 @@ ThemeData materialHighContrastDarkMaterialThemeData = ThemeData(
   drawerTheme: materialHighContrastDarkDrawerThemeData,
   navigationRailTheme: materialHighContrastDarkNavigationRailThemeData,
   navigationBarTheme: materialHighContrastDarkNavigationBarThemeData,
-  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  
   bottomNavigationBarTheme: materialHighContrastDarkBottomNavigationBarThemeData,
   androidOverscrollIndicator: AndroidOverscrollIndicator.glow,
   iconTheme: materialHighContrastDarkIconThemeData,
-  applyElevationOverlayColor: true,
+  applyElevationOverlayColor: false,
   scrollbarTheme: materialHighContrastDarkScrollbarThemeData,
   toggleButtonsTheme: materialHighContrastDarkToggleButtonThemeData,
   sliderTheme: materialHighContrastDarkSliderThemeData,
-  chipTheme: materialHighContrastDarkChipThemeData,
+  
   tabBarTheme: materialHighContrastDarkTabbarTheme,
   shadowColor: Colors.black,
   splashColor: const Color(0x40CCCCCC),
@@ -223,9 +230,7 @@ ThemeData materialHighContrastDarkMaterialThemeData = ThemeData(
   dialogBackgroundColor: Colors.grey[800],
   hintColor: Colors.white60,
   errorColor: Colors.red[700],
-  primarySwatch: Colors.blue,
-  primaryColorLight: Colors.blue,
-  primaryColorDark: Colors.blue[700],
+  
   toggleableActiveColor: Colors.tealAccent[200],
   indicatorColor: Colors.tealAccent[200],
 );

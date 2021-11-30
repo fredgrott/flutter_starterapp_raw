@@ -28,7 +28,7 @@
 		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
 		//dartcode
-		"dart.flutterScreenshotPath":"screenshots",
+		"dart.flutterScreenshotPath": null,
 		"plantuml.diagramsRoot": "reports/docs/diagrams/src",
     "plantuml.exportOutDir": "reports/docs/diagrams/out",
 		"plantuml.includepaths": ["reports/docs/diagrams/style","docs/diagrams/src"],

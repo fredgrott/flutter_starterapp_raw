@@ -17,6 +17,8 @@ AppBarTheme materialLightAppBarTheme = AppBarTheme(
   // only if we need to override the ThemeData shadow color
   //shadowColor: materialLightShadowColor,
 
+  
+
   centerTitle: true,
   titleSpacing: 1,
   iconTheme: materialLightIconThemeData,

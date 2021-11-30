@@ -4,10 +4,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/materialbasedcupertinotheme.dart';
 
 DrawerThemeData cupertinoLightDrawerThemeData = DrawerThemeData(
-  backgroundColor: cupertinoSecondaryVariantColor,
+  backgroundColor: cupertinoMaterialThemeData.backgroundColor,
   scrimColor: cupertinoPrimaryVariantColor,
   elevation: 2,
 );
-

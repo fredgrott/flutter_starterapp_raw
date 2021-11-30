@@ -8,11 +8,12 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materia
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_selected_textstyle.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_unselected_icon_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_unselected_textstyle.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/materialbasedcupertinotheme.dart';
 
 
 NavigationRailThemeData cupertinoLightNavigationRailThemeData =
     NavigationRailThemeData(
-  backgroundColor: cupertinoBackgroundColor,
+  backgroundColor: cupertinoMaterialThemeData.backgroundColor,
   elevation: 2,
   labelType: NavigationRailLabelType.all,
   groupAlignment: 2,

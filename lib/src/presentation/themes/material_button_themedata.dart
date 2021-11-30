@@ -4,7 +4,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_colors.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_colorschemes.dart';
+
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_themedata.dart';
 
 ButtonThemeData materialLightButtonThemeData = ButtonThemeData(
   textTheme: ButtonTextTheme.primary,
@@ -16,14 +17,14 @@ ButtonThemeData materialLightButtonThemeData = ButtonThemeData(
   // ignore: avoid_redundant_argument_values
   layoutBehavior: ButtonBarLayoutBehavior.padded,
   alignedDropdown: true,
-  splashColor: materialLightSurfaceColor,
-  highlightColor: materialLightSecondaryColor,
-  hoverColor: materialLightPrimaryColor,
+  splashColor: materialLightMaterialThemeData.splashColor,
+  highlightColor: materialLightMaterialThemeData.highlightColor,
+  hoverColor: materialLightMaterialThemeData.hoverColor,
   focusColor: materialLightPrimaryVariantColor,
-  disabledColor: Colors.grey,
-  buttonColor: materialLightSecondaryVariantColor,
-  colorScheme: materialLightColorScheme,
-  materialTapTargetSize: MaterialTapTargetSize.padded,
+  disabledColor: materialLightMaterialThemeData.disabledColor,
+  buttonColor: Colors.grey[300],
+  colorScheme: materialLightMaterialThemeData.colorScheme,
+  
 );
 
 ButtonThemeData materialHighContrastLightButtonThemeData = ButtonThemeData(
@@ -36,14 +37,14 @@ ButtonThemeData materialHighContrastLightButtonThemeData = ButtonThemeData(
   // ignore: avoid_redundant_argument_values
   layoutBehavior: ButtonBarLayoutBehavior.padded,
   alignedDropdown: true,
-  splashColor: materialHighContrastLightSurfaceColor,
-  highlightColor: materialHighContrastLightSecondaryColor,
-  hoverColor: materialHighContrastLightPrimaryColor,
-  focusColor: materialHighContrastLightPrimaryVariantColor,
-  disabledColor: Colors.grey,
-  buttonColor: materialHighContrastLightSecondaryVariantColor,
-  colorScheme: materialHighContrastLightColorScheme,
-  materialTapTargetSize: MaterialTapTargetSize.padded,
+  splashColor: materialHighContrastLightMaterialThemeData.splashColor,
+  highlightColor: materialHighContrastLightMaterialThemeData.highlightColor,
+  hoverColor: materialHighContrastLightMaterialThemeData.hoverColor,
+  focusColor: materialHighContrastLightMaterialThemeData.focusColor,
+  disabledColor: materialHighContrastLightMaterialThemeData.disabledColor,
+  buttonColor:   Colors.grey[300],
+  colorScheme: materialHighContrastLightMaterialThemeData.colorScheme,
+  
 );
 
 ButtonThemeData materialDarkButtonThemeData = ButtonThemeData(
@@ -56,14 +57,14 @@ ButtonThemeData materialDarkButtonThemeData = ButtonThemeData(
   // ignore: avoid_redundant_argument_values
   layoutBehavior: ButtonBarLayoutBehavior.padded,
   alignedDropdown: true,
-  splashColor: materialDarkSurfaceColor,
-  highlightColor: materialDarkSecondaryColor,
-  hoverColor: materialDarkPrimaryColor,
-  focusColor: materialDarkPrimaryVariantColor,
-  disabledColor: Colors.grey,
-  buttonColor: materialDarkSecondaryVariantColor,
-  colorScheme: materialDarkColorScheme,
-  materialTapTargetSize: MaterialTapTargetSize.padded,
+  splashColor: materialDarkMaterialThemeData.splashColor,
+  highlightColor: materialDarkMaterialThemeData.highlightColor,
+  hoverColor: materialDarkMaterialThemeData.hoverColor,
+  focusColor: materialDarkMaterialThemeData.focusColor,
+  disabledColor: materialDarkMaterialThemeData.disabledColor,
+  buttonColor: Colors.blue[600],
+  colorScheme: materialDarkMaterialThemeData.colorScheme,
+  
 );
 
 ButtonThemeData materialHighContrastDarkButtonThemeData = ButtonThemeData(
@@ -76,12 +77,12 @@ ButtonThemeData materialHighContrastDarkButtonThemeData = ButtonThemeData(
   // ignore: avoid_redundant_argument_values
   layoutBehavior: ButtonBarLayoutBehavior.padded,
   alignedDropdown: true,
-  splashColor: materialHighContrastDarkSurfaceColor,
-  highlightColor: materialHighContrastDarkSecondaryColor,
-  hoverColor: materialHighContrastDarkPrimaryColor,
-  focusColor: materialHighContrastDarkPrimaryVariantColor,
-  disabledColor: Colors.grey,
-  buttonColor: materialHighContrastDarkSecondaryVariantColor,
-  colorScheme: materialHighContrastDarkColorScheme,
-  materialTapTargetSize: MaterialTapTargetSize.padded,
+  splashColor: materialHighContrastDarkMaterialThemeData.splashColor,
+  highlightColor: materialHighContrastDarkMaterialThemeData.highlightColor,
+  hoverColor: materialHighContrastDarkMaterialThemeData.hoverColor,
+  focusColor: materialHighContrastDarkMaterialThemeData.focusColor,
+  disabledColor: materialHighContrastDarkMaterialThemeData.disabledColor,
+  buttonColor: Colors.blue[600],
+  colorScheme: materialHighContrastDarkMaterialThemeData.colorScheme,
+  
 );

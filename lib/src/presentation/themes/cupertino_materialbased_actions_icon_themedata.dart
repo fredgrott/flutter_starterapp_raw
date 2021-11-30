@@ -8,4 +8,3 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_colors.
 IconThemeData cupertinoLightActionsIconThemeData = IconThemeData(
   color: cupertinoSecondaryColor,
 );
-

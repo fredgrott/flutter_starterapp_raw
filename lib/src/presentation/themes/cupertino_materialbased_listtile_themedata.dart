@@ -20,5 +20,3 @@ ListTileThemeData cupertinoLightListTileThemeData = ListTileThemeData(
   minLeadingWidth: 2,
   enableFeedback: true,
 );
-
-

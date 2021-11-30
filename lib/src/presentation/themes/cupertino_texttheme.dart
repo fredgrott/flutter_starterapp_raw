@@ -3,28 +3,31 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 
 CupertinoTextThemeData cupertinoTextThemeData = CupertinoTextThemeData(
   primaryColor: cupertinoPrimaryVariantColor,
   textStyle: cupertinoDefaultTextStyle,
   actionTextStyle: cupertinoDefaultActionTextStyle,
   tabLabelTextStyle: cupertinoDefaultTabLabelTextStyle,
-  navTitleTextStyle:cupertinoDeafaultMiddleTitleTextStyle,
+  navTitleTextStyle: cupertinoDeafaultMiddleTitleTextStyle,
   navLargeTitleTextStyle: cupertinoDefaultLargeTitleTextStyle,
   pickerTextStyle: cupertinoDefaultPickerTextStyle,
-  dateTimePickerTextStyle:cupertinoDefaultDateTimePickerTextStyle,
+  dateTimePickerTextStyle: cupertinoDefaultDateTimePickerTextStyle,
   navActionTextStyle: cupertinoDefaultActionTextStyle,
 );
+
+CupertinoDynamicColor cupertinoTextColor = const CupertinoDynamicColor.withBrightness(
+    color: Colors.black, darkColor: Colors.white,);
 
 TextStyle cupertinoDefaultTextStyle = TextStyle(
   inherit: false,
   fontFamily: GoogleFonts.notoSerif().fontFamily,
   fontSize: 17,
   letterSpacing: -0.41,
-  color: CupertinoColors.label,
+  color: cupertinoTextColor,
   decoration: TextDecoration.none,
 );
 
@@ -33,18 +36,16 @@ TextStyle cupertinoDefaultActionTextStyle = TextStyle(
   fontFamily: GoogleFonts.notoSerif().fontFamily,
   fontSize: 17,
   letterSpacing: -0.41,
-  color: cupertinoPrimaryColor,
+  color: cupertinoTextColor,
   decoration: TextDecoration.none,
 );
-
-
 
 TextStyle cupertinoDefaultTabLabelTextStyle = TextStyle(
   inherit: false,
   fontFamily: GoogleFonts.notoSerif().fontFamily,
   fontSize: 10,
   letterSpacing: -0.24,
-  color: CupertinoColors.inactiveGray,
+  color: cupertinoTextColor,
 );
 
 TextStyle cupertinoDeafaultMiddleTitleTextStyle = TextStyle(
@@ -53,7 +54,7 @@ TextStyle cupertinoDeafaultMiddleTitleTextStyle = TextStyle(
   fontSize: 17,
   fontWeight: FontWeight.w600,
   letterSpacing: -0.41,
-  color: CupertinoColors.label,
+  color: cupertinoTextColor,
 );
 
 TextStyle cupertinoDefaultLargeTitleTextStyle = TextStyle(
@@ -62,7 +63,7 @@ TextStyle cupertinoDefaultLargeTitleTextStyle = TextStyle(
   fontSize: 34.0,
   fontWeight: FontWeight.w700,
   letterSpacing: 0.41,
-  color: CupertinoColors.label,
+  color: cupertinoTextColor,
 );
 
 TextStyle cupertinoDefaultPickerTextStyle = TextStyle(
@@ -71,7 +72,7 @@ TextStyle cupertinoDefaultPickerTextStyle = TextStyle(
   fontSize: 21,
   fontWeight: FontWeight.w400,
   letterSpacing: -0.6,
-  color: CupertinoColors.label,
+  color: cupertinoTextColor,
 );
 
 TextStyle cupertinoDefaultDateTimePickerTextStyle = TextStyle(
@@ -79,5 +80,5 @@ TextStyle cupertinoDefaultDateTimePickerTextStyle = TextStyle(
   fontFamily: GoogleFonts.notoSans().fontFamily,
   fontSize: 21,
   fontWeight: FontWeight.normal,
-  color: CupertinoColors.label,
+  color: cupertinoTextColor,
 );

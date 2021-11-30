@@ -9,7 +9,7 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_colors.
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_bottom_navigationbar_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_button_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_card_theme.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_chip_themedata.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_drawer_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_icon_themedata.dart';
 
@@ -21,6 +21,8 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materia
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_tabbar_theme.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_texttheme.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_materialbased_toggle_button_themedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/cupertinooverride_theme.dart';
+
 
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_typography.dart';
 
@@ -33,6 +35,11 @@ MaterialBasedCupertinoThemeData materialBasedCupertinoThemeData =
 );
 
 ThemeData cupertinoMaterialThemeData = ThemeData(
+  // we are overriding the default Cupertino Text Theme to 
+  // deliver our custom fonts to Cupertino Widgets that are using Material
+  // based cupertino themes. This way the platformThemeData text style 
+  // trick will deliver the right custom fonts to Cupertino Widgets
+  cupertinoOverrideTheme: cupertinoOverrideTheme,
   colorScheme: cupertinoColorScheme,
   visualDensity: VisualDensity.adaptivePlatformDensity,
   typography: materialTypography,
@@ -45,14 +52,15 @@ ThemeData cupertinoMaterialThemeData = ThemeData(
   drawerTheme: cupertinoLightDrawerThemeData,
   navigationRailTheme: cupertinoLightNavigationRailThemeData,
   navigationBarTheme: cupertinoLightNavigationBarThemeData,
-  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  
   bottomNavigationBarTheme: cupertinoLightBottomNavigationBarThemeData,
   iconTheme: cupertinoLightIconThemeData,
-  applyElevationOverlayColor: true,
+  // default is false
+  applyElevationOverlayColor: false,
   scrollbarTheme: cupertinoLightScrollbarThemeData,
   toggleButtonsTheme: cupertinoLightToggleButtonThemeData,
   sliderTheme: cupertinoLightSliderThemeData,
-  chipTheme: cupertinoLightChipThemeData,
+  
   tabBarTheme: cupertinoLightTabbarTheme,
   shadowColor: cupertinoShadowColor,
   splashColor: cupertinoSplashColor,
@@ -72,9 +80,7 @@ ThemeData cupertinoMaterialThemeData = ThemeData(
   dialogBackgroundColor: cupertinoDialogBackgroundColor,
   hintColor: cupertinoHintColor,
   errorColor: cupertinoErrorColor,
-  primarySwatch: Colors.blue,
-  primaryColorLight: Colors.blue,
-  primaryColorDark: Colors.blue[700],
+  
   toggleableActiveColor: cupertinoToggableActionColor,
   indicatorColor: cupertinoIndicatorColor,
 );

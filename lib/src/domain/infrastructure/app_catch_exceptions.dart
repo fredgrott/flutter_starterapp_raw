@@ -4,7 +4,11 @@
 
 // ignore: avoid_redundant_argument_values
 import 'package:catcher/catcher.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_vars.dart';
+
+// Report Mode requires our own Navigation Key
+final GlobalKey<NavigatorState> myNavigatorKey = GlobalKey<NavigatorState>();
 
 
 // ignore: avoid_redundant_argument_values

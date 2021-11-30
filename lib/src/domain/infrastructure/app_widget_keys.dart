@@ -8,6 +8,8 @@ const Key appKey = Key("AppKey");
 
 const Key appBarKey = Key("AppBarKey");
 
+const Key scaffoldKey = Key("ScaffoldKey");
+
 const Key sliverAppBarKey = Key("SliverAppBarKey");
 
 const Key appBarTitleKey = Key("AppBarTitleKey");

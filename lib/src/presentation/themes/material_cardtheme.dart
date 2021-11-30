@@ -4,26 +4,27 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/material_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/material_themedata.dart';
 
 
 
 CardTheme materialLightCardTheme = CardTheme(
-  color: materialLightSurfaceColor,
+  color: materialLightMaterialThemeData.cardColor,
   shadowColor: materialLightPrimaryColor,
 
 );
 
 CardTheme materialHighContrastLightCardTheme = CardTheme(
-  color: materialHighContrastLightSurfaceColor,
+  color: materialHighContrastLightMaterialThemeData.cardColor,
   shadowColor: materialHighContrastLightPrimaryColor,
 );
 
 CardTheme materialDarkCardTheme = CardTheme(
-  color: materialDarkSurfaceColor,
+  color: materialDarkMaterialThemeData.cardColor,
   shadowColor: materialLightPrimaryColor,
 );
 
 CardTheme materialHighContrastDarkCardTheme = CardTheme(
-  color: materialHighContrastDarkSurfaceColor,
+  color: materialHighContrastDarkMaterialThemeData.cardColor,
   shadowColor: materialHighContrastLightPrimaryColor,
 );

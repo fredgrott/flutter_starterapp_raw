@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/cupertino_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/materialbasedcupertinotheme.dart';
 
 
 ToggleButtonsThemeData cupertinoLightToggleButtonThemeData =
@@ -14,12 +15,12 @@ ToggleButtonsThemeData cupertinoLightToggleButtonThemeData =
   ),
   color: cupertinoPrimaryColor,
   selectedColor: cupertinoPrimaryVariantColor,
-  disabledColor: Colors.grey,
+  disabledColor: cupertinoMaterialThemeData.disabledColor,
   fillColor: cupertinoSecondaryColor,
-  focusColor: cupertinoSecondaryVariantColor,
-  hoverColor: cupertinoSecondaryColor,
-  highlightColor: cupertinoPrimaryVariantColor,
-  splashColor: cupertinoSecondaryColor,
+  focusColor: cupertinoMaterialThemeData.focusColor,
+  hoverColor: cupertinoMaterialThemeData.hoverColor,
+  highlightColor: cupertinoMaterialThemeData.highlightColor,
+  splashColor: cupertinoMaterialThemeData.splashColor,
   borderColor: cupertinoPrimaryVariantColor,
   selectedBorderColor: cupertinoSecondaryVariantColor,
   disabledBorderColor: Colors.blueGrey,

@@ -11,8 +11,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_build_modes.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_catch_exceptions.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_vars.dart';
+import 'package:flutter_starterapp_raw/src/myapp.dart';
 
-import 'src/app.dart';
+
 import 'src/presentation/features/settings/controllers/settings_controller.dart';
 import 'src/presentation/features/settings/services/settings_service.dart';
 
@@ -24,7 +25,9 @@ void mainDelegate() => main();
 
 // ignore: long-method
 Future<void> main() async {
-  // Ensures the Flutter Sky Engine is fully initialized
+  // Ensures the Flutter Sky Engine is fully initialized, 
+  // we can do it here or use the Catcher constructor to 
+  // also initialize it.
   WidgetsFlutterBinding.ensureInitialized();
 
 // to get license as needed when you use custom fonts
@@ -70,14 +73,21 @@ Future<void> main() async {
 
   runZonedGuarded<Future<void>>(
     () async {
+      // Catcher Config Options:
+      //     
       Catcher(
+        // no need to supply nav key as MyApp parameter as in stateless 
+        // we do not have a widget thing to grab we cannot access static 
+        // instances so we just grab the right var from 
+        // app catch exceptions file. That means that if 
+        // problably should be some service injected dependency
         rootWidget: MyApp(
-          navigatorKey: navigatorKey,
+          
           settingsController: settingsController,
         ),
         debugConfig: debugOptions,
         releaseConfig: releaseOptions,
-        navigatorKey: navigatorKey,
+        navigatorKey: myNavigatorKey,
       );
     },
     // ignore: no-empty-block
