@@ -9,6 +9,11 @@ import 'app_texttheme_extension.dart';
 
 // Gist: Typography For MD3, see:
 //       https://m3.material.io/styles/typography/tokens
+//       Note that we additionaly have line height co compute 
+//       everywhere font size is set and is computed as 
+//       line-height from MD3 spec above divided by font size.
+//       For example Display large font line height is 64  and 
+//       font size is 57 so 64/57 = 1.12 setting height value
 
 
 Typography appTypography = Typography(
@@ -333,6 +338,7 @@ TextStyle appTallDisplayLarge = const TextStyle(
   fontSize: 57,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.12,
 );
 
 TextStyle appTallDisplayMedium = const TextStyle(
@@ -341,6 +347,7 @@ TextStyle appTallDisplayMedium = const TextStyle(
   fontSize: 45,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.16,
 );
 
 TextStyle appTallDisplaySmall = const TextStyle(
@@ -349,6 +356,7 @@ TextStyle appTallDisplaySmall = const TextStyle(
   fontSize: 36,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.22,
 );
 
 TextStyle appTallHeadlineLarge = const TextStyle(
@@ -357,6 +365,7 @@ TextStyle appTallHeadlineLarge = const TextStyle(
   fontSize: 32,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.25,
 );
 
 TextStyle appTallHeadlineMedium = const TextStyle(
@@ -365,6 +374,7 @@ TextStyle appTallHeadlineMedium = const TextStyle(
   fontSize: 28,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.29,
 );
 
 TextStyle appTallHeadlineSmall = const TextStyle(
@@ -373,6 +383,7 @@ TextStyle appTallHeadlineSmall = const TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.33,
 );
 
 TextStyle appTallTitleLarge = const TextStyle(
@@ -381,6 +392,7 @@ TextStyle appTallTitleLarge = const TextStyle(
   fontSize: 22,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.27,
 );
 
 TextStyle appTallTitleMedium = const TextStyle(
@@ -389,6 +401,7 @@ TextStyle appTallTitleMedium = const TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.5,
 );
 
 TextStyle appTallTitleSmall = const TextStyle(
@@ -397,6 +410,7 @@ TextStyle appTallTitleSmall = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.43,
 );
 
 TextStyle appTallBodyLarge = const TextStyle(
@@ -405,6 +419,7 @@ TextStyle appTallBodyLarge = const TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.5,
 );
 
 TextStyle appTallBodyMedium = const TextStyle(
@@ -413,6 +428,7 @@ TextStyle appTallBodyMedium = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.43,
 );
 
 TextStyle appTallBodySmall = const TextStyle(
@@ -421,6 +437,7 @@ TextStyle appTallBodySmall = const TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.33,
 );
 
 TextStyle appTallLabelLarge = const TextStyle(
@@ -429,6 +446,7 @@ TextStyle appTallLabelLarge = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.43,
 );
 
 TextStyle appTallLabelMedium = const TextStyle(
@@ -437,6 +455,7 @@ TextStyle appTallLabelMedium = const TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.33,
 );
 
 TextStyle appTallLabelSmall = const TextStyle(
@@ -445,6 +464,7 @@ TextStyle appTallLabelSmall = const TextStyle(
   fontSize: 11,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 0.55,
 );
 
 TextStyle appDenseDisplayLarge = const TextStyle(
@@ -452,6 +472,7 @@ TextStyle appDenseDisplayLarge = const TextStyle(
   fontSize: 57,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.ideographic,
+  height: 1.22,
 );
 
 TextStyle appDenseDisplayMedium = const TextStyle(
@@ -459,6 +480,7 @@ TextStyle appDenseDisplayMedium = const TextStyle(
   fontSize: 45,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.ideographic,
+  height: 1.16,
 );
 
 TextStyle appDenseDisplaySmall = const TextStyle(
@@ -466,6 +488,7 @@ TextStyle appDenseDisplaySmall = const TextStyle(
   fontSize: 36,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.ideographic,
+  height: 1.22,
 );
 
 TextStyle appDenseHeadlineLarge = const TextStyle(
@@ -473,6 +496,7 @@ TextStyle appDenseHeadlineLarge = const TextStyle(
   fontSize: 32,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.ideographic,
+  height: 1.25,
 );
 
 TextStyle appDenseHeadlineMedium = const TextStyle(
@@ -480,6 +504,7 @@ TextStyle appDenseHeadlineMedium = const TextStyle(
   fontSize: 28,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.ideographic,
+  height: 1.29,
 );
 
 TextStyle appDenseHeadlineSmall = const TextStyle(
@@ -487,6 +512,7 @@ TextStyle appDenseHeadlineSmall = const TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.ideographic,
+  height: 1.33,
 );
 
 TextStyle appDenseTitleLarge = const TextStyle(
@@ -494,6 +520,7 @@ TextStyle appDenseTitleLarge = const TextStyle(
   fontSize: 22,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.ideographic,
+  height: 1.27,
 );
 
 TextStyle appDenseTitleMedium = const TextStyle(
@@ -501,6 +528,7 @@ TextStyle appDenseTitleMedium = const TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
+  height: 1.5,
 );
 
 TextStyle appDenseTitleSmall = const TextStyle(
@@ -508,6 +536,7 @@ TextStyle appDenseTitleSmall = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
+  height: 1.43,
 );
 
 TextStyle appDenseBodyLarge = const TextStyle(
@@ -515,6 +544,7 @@ TextStyle appDenseBodyLarge = const TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
+  height: 1.5,
 );
 
 TextStyle appDenseBodyMedium = const TextStyle(
@@ -522,6 +552,7 @@ TextStyle appDenseBodyMedium = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
+  height: 1.43,
 );
 
 TextStyle appDenseBodySmall = const TextStyle(
@@ -529,6 +560,7 @@ TextStyle appDenseBodySmall = const TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
+  height: 1.33,
 );
 
 TextStyle appDenseLabelLarge = const TextStyle(
@@ -536,6 +568,7 @@ TextStyle appDenseLabelLarge = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
+  height: 1.43,
 );
 
 TextStyle appDenseLabelMedium = const TextStyle(
@@ -543,6 +576,7 @@ TextStyle appDenseLabelMedium = const TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
+  height: 1.33,
 );
 
 TextStyle appDenseLabelSmall = const TextStyle(
@@ -550,6 +584,7 @@ TextStyle appDenseLabelSmall = const TextStyle(
   fontSize: 11,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
+  height: 0.55,
 );
 
 TextStyle appEnglishLikeDisplayLarge = const TextStyle(
@@ -557,6 +592,7 @@ TextStyle appEnglishLikeDisplayLarge = const TextStyle(
   fontSize: 57,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.12,
   letterSpacing: 0.0,
 );
 
@@ -565,6 +601,7 @@ TextStyle appEnglishLikeDisplayMedium = const TextStyle(
   fontSize: 45,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.16,
   letterSpacing: 0.0,
 );
 
@@ -573,6 +610,7 @@ TextStyle appEnglishLikeDisplaySmall = const TextStyle(
   fontSize: 36,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.22,
   letterSpacing: 0.0,
 );
 
@@ -581,6 +619,7 @@ TextStyle appEnglishLikeHeadlineLarge = const TextStyle(
   fontSize: 32,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.25,
   letterSpacing: 0.0,
 );
 
@@ -589,6 +628,7 @@ TextStyle appEnglishLikeHeadlineMedium = const TextStyle(
   fontSize: 28,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.29,
   letterSpacing: 0.0,
 );
 
@@ -597,6 +637,7 @@ TextStyle appEnglishLikeHeadlineSmall = const TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.33,
   letterSpacing: 0.0,
 );
 
@@ -605,6 +646,7 @@ TextStyle appEnglishLikeTitleLarge = const TextStyle(
   fontSize: 22,
   fontWeight: FontWeight.w400,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.27,
   letterSpacing: 0.0,
 );
 
@@ -613,6 +655,7 @@ TextStyle appEnglishLikeTitelMedium = const TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.5,
   letterSpacing: 0.01,
 );
 
@@ -621,6 +664,7 @@ TextStyle appEnglishLikeTitleSmall = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.43,
   letterSpacing: 0.01,
 );
 
@@ -629,6 +673,7 @@ TextStyle appEnglishLikeBodyLarge = const TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.5,
   letterSpacing: 0.01,
 );
 
@@ -637,6 +682,7 @@ TextStyle appEnglishLikeBodyMedium = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.43,
   letterSpacing: 0.02,
 );
 
@@ -645,6 +691,7 @@ TextStyle appEnglishLikeBodySmall = const TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.33,
   letterSpacing: 0.33,
 );
 
@@ -653,6 +700,7 @@ TextStyle appEnglishLikeLabelLarge = const TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.43,
   letterSpacing: 0.01,
 );
 
@@ -661,6 +709,7 @@ TextStyle appEnglishLikeLabelMedium = const TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 1.33,
   letterSpacing: 0.41,
 );
 
@@ -669,5 +718,6 @@ TextStyle appEnglishLikeLabelSmall = const TextStyle(
   fontSize: 11,
   fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
+  height: 0.55,
   letterSpacing: 0.45,
 );
