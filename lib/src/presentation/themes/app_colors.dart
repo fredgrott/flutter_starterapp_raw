@@ -2,24 +2,118 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+// ignore_for_file: type_annotate_public_apis
+
 import 'package:flutter/cupertino.dart';
 
 import 'package:material_color_utilities/material_color_utilities.dart';
+import 'package:material_color_utilities/scheme/scheme.dart';
 
-// App Colors MD3 way. 
+// App Colors MD3 way.
 // PlainColorName = Major emphasis
 // ContainerColorName = Minor emphasis what was variants under MD2
 //
 // legac wise tertiar will map to secondary
 //
-// inverse colors used in alerts with inversePrimary used for high color on 
+// inverse colors used in alerts with inversePrimary used for high color on
 // inverseSurface.
 //
 //  Dynamic Material You(androdi 12) is through the Scheme.light(color) and Scheme.dark(color)
 //  constructors with non dynamic MD3 colors flowing through ColorScheme and ThemeData work
 //  arounds.
 
-CorePalette myCoreColor = CorePalette.of(0xff2196f3);
+// 0 103 127 or 00677f which is 0xff00677f
+CorePalette myCoreColor = CorePalette.of(0xff00677f);
+
+Scheme appMaterialLightScheme = Scheme(
+  primary: appPrimaryLight,
+  onPrimary: appOnPrimaryLight,
+  primaryContainer: appPrimaryContainerLight,
+  onPrimaryContainer: appOnPrimaryContainerLight,
+  secondary: appSecondaryLight,
+  onSecondary: appOnSecondaryLight,
+  secondaryContainer: appSecondaryContainerLight,
+  onSecondaryContainer: appOnSecondaryContainerLight,
+  tertiary: appTertiaryLight,
+  onTertiary: appOnTertiaryLight,
+  tertiaryContainer: appTertiaryContainerLight,
+  onTertiaryContainer: appOnTertiaryContainerLight,
+  error: appErrorLight,
+  onError: appOnErrorLight,
+  errorContainer: appErrorContainerLight,
+  onErrorContainer: appOnErrorContainerLight,
+  background: appBackgroundLight,
+  onBackground: appOnBackgroundLight,
+  surface: appSurfaceLight,
+  onSurface: appOnSurfaceLight,
+  surfaceVariant: appSurfaceVariantLight,
+  onSurfaceVariant: appOnSurfaceVariantLight,
+  outline: appOutlineLight,
+  shadow: appShadowLight,
+  inverseSurface: appInverseSurfaceLight,
+  inverseOnSurface: appOnInverseSurfaceLight,
+  inversePrimary: appInversePrimaryLight,
+);
+
+Scheme appMaterialDarkScheme = Scheme(
+  primary: appPrimaryDark,
+  onPrimary: appOnPrimaryDark,
+  primaryContainer: appPrimaryContainerDark,
+  onPrimaryContainer: appOnPrimaryContainerDark,
+  secondary: appSecondaryDark,
+  onSecondary: appOnSecondaryDark,
+  secondaryContainer: appSecondaryContainerDark,
+  onSecondaryContainer: appOnSecondaryContainerDark,
+  tertiary: appTertiaryDark,
+  onTertiary: appOnTertiaryDark,
+  tertiaryContainer: appTertiaryContainerDark,
+  onTertiaryContainer: appOnTertiaryContainerDark,
+  error: appErrorDark,
+  onError: appOnErrorDark,
+  errorContainer: appErrorContainerDark,
+  onErrorContainer: appOnErrorContainerDark,
+  background: appBackgroundDark,
+  onBackground: appOnBackgroundDark,
+  surface: appSurfaceDark,
+  onSurface: appOnSurfaceDark,
+  surfaceVariant: appSurfaceVariantDark,
+  onSurfaceVariant: appOnSurfaceVariantDark,
+  outline: appOutlineDark,
+  shadow: appShadowDark,
+  inverseSurface: appInverseSurfaceDark,
+  inverseOnSurface: appOnInverseSurfaceDark,
+  inversePrimary: appInversePrimaryDark,
+);
+
+Scheme appCupertinoScheme = Scheme(
+  primary: appCupertinoPrimary as int,
+  onPrimary: appCupertinoOnPrimary as int,
+  primaryContainer: appCupertinoPrimaryContainer as int,
+  onPrimaryContainer: appCupertinoOnPrimaryContainer as int,
+  secondary: appCupertinoSecondary as int,
+  onSecondary: appCupertinoOnSecondary as int,
+  secondaryContainer: appCupertinoSecondaryContainer as int,
+  onSecondaryContainer: appCupertinoOnSecondaryContainer as int,
+  tertiary: appCupertinoTertiary as int,
+  onTertiary: appCupertinoOnTertiary as int,
+  tertiaryContainer: appCupertinoTertiaryContainer as int,
+  onTertiaryContainer: appCupertinoOnTertiaryContainer as int,
+  error: appCupertinoError as int,
+  onError: appCupertinoOnError as int,
+  errorContainer: appCupertinoErrorContainer as int,
+  onErrorContainer: appCupertinoOnErrorContainer as int,
+  background: appCupertinoBackground as int,
+  onBackground: appCupertinoOnBackground as int,
+  surface: appCupertinoSurface as int,
+  onSurface: appCupertinoOnSurface as int,
+  surfaceVariant: appCupertinoSurfaceVariant as int,
+  onSurfaceVariant: appCupertinoOnSurfaceVariant as int,
+  outline: appCupertinoOutline as int,
+  shadow: appCupertinoShadow as int,
+  inverseSurface: appCupertinoInverseSurface as int,
+  inverseOnSurface: appCupertinoOnInverseSurface as int,
+  inversePrimary: appCupertinoInversePrimary as int,
+);
 
 // Light
 int appPrimaryLight = myCoreColor.primary.get(40);
@@ -72,7 +166,7 @@ int appOnBackgroundDark = myCoreColor.neutral.get(90);
 int appSurfaceDark = myCoreColor.neutral.get(10);
 int appOnSurfaceDark = myCoreColor.neutral.get(90);
 int appSurfaceVariantDark = myCoreColor.neutralVariant.get(30);
-int appOnSurfaceVaraintDark = myCoreColor.neutralVariant.get(80);
+int appOnSurfaceVariantDark = myCoreColor.neutralVariant.get(80);
 int appOutlineDark = myCoreColor.neutralVariant.get(60);
 int appShadowDark = myCoreColor.neutral.get(0);
 int appInverseSurfaceDark = myCoreColor.neutral.get(90);
@@ -129,25 +223,25 @@ CupertinoDynamicColor appCupertinoOnSecondaryContainer =
   darkColor: appOnSecondaryContainerDark as Color,
 );
 
-CupertinoDynamicColor appCupertinoTeriary =
+CupertinoDynamicColor appCupertinoTertiary =
     CupertinoDynamicColor.withBrightness(
   color: appTertiaryLight as Color,
   darkColor: appTertiaryDark as Color,
 );
 
-CupertinoDynamicColor appCupertinoOnTeriary =
+CupertinoDynamicColor appCupertinoOnTertiary =
     CupertinoDynamicColor.withBrightness(
   color: appOnTertiaryLight as Color,
   darkColor: appOnTertiaryDark as Color,
 );
 
-CupertinoDynamicColor appCupertinoTeriaryContainer =
+CupertinoDynamicColor appCupertinoTertiaryContainer =
     CupertinoDynamicColor.withBrightness(
   color: appTertiaryContainerLight as Color,
   darkColor: appTertiaryContainerDark as Color,
 );
 
-CupertinoDynamicColor appCupertinoOnTeriaryContainer =
+CupertinoDynamicColor appCupertinoOnTertiaryContainer =
     CupertinoDynamicColor.withBrightness(
   color: appOnTertiaryContainerLight as Color,
   darkColor: appOnTertiaryContainerDark as Color,
@@ -209,7 +303,7 @@ CupertinoDynamicColor appCupertinoSurfaceVariant =
 CupertinoDynamicColor appCupertinoOnSurfaceVariant =
     CupertinoDynamicColor.withBrightness(
   color: appOnSurfaceVariantLight as Color,
-  darkColor: appOnSurfaceVaraintDark as Color,
+  darkColor: appOnSurfaceVariantDark as Color,
 );
 
 CupertinoDynamicColor appCupertinoOutline =
@@ -229,7 +323,7 @@ CupertinoDynamicColor appCupertinoInverseSurface =
   darkColor: appInverseSurfaceDark as Color,
 );
 
-CupertinoDynamicColor appCupertinoOnInverserSurface =
+CupertinoDynamicColor appCupertinoOnInverseSurface =
     CupertinoDynamicColor.withBrightness(
   color: appOnInverseSurfaceLight as Color,
   darkColor: appOnInverseSurfaceDark as Color,
