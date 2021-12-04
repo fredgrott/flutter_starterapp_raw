@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_selected_icon_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_selectedlabelstyle.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_unselectedicon_themedata.dart';
@@ -14,7 +15,7 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/app_unselectedlab
 BottomNavigationBarThemeData appMaterialLightBottomNavBarThemeData =
     BottomNavigationBarThemeData(
       backgroundColor: appMaterialLightScheme.background as Color,
-      elevation: 4,
+      elevation: appElevation,
       selectedIconTheme: appMaterialLightSelectedIconThemeData,
       unselectedIconTheme: appMaterialLightUnselectedIconThemeData,
       showSelectedLabels: true,
@@ -31,7 +32,7 @@ BottomNavigationBarThemeData appMaterialLightBottomNavBarThemeData =
 BottomNavigationBarThemeData appMaterialDarkBottomNavBarThemeData =
     BottomNavigationBarThemeData(
   backgroundColor: appMaterialDarkScheme.background as Color,
-  elevation: 4,
+  elevation: appElevation,
   selectedIconTheme: appMaterialDarkSelectedIconThemeData,
   unselectedIconTheme: appMaterialDarkUnselectedIconThemeData,
   showSelectedLabels: true,
@@ -48,7 +49,7 @@ BottomNavigationBarThemeData appMaterialDarkBottomNavBarThemeData =
 BottomNavigationBarThemeData appCupertinoBottomNavBarThemeData =
     BottomNavigationBarThemeData(
   backgroundColor: appCupertinoScheme.background as Color,
-  elevation: 4,
+  elevation: appElevation,
   selectedIconTheme: appCupertinoSelectedIconThemeData,
   unselectedIconTheme: appCupertinoUnselectedIconThemeData,
   showSelectedLabels: true,

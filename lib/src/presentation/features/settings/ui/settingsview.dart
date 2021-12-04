@@ -6,11 +6,11 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
-
 import 'package:flutter_starterapp_raw/src/presentation/features/home/ui/sampleitem_listview.dart';
 import 'package:flutter_starterapp_raw/src/presentation/features/settings/controllers/settings_controller.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_text_theme_ext.dart';
 import 'package:lifecycle/lifecycle.dart';
 
 class SettingsView extends StatelessWidget {
@@ -44,8 +44,8 @@ class SettingsView extends StatelessWidget {
             textAlign: TextAlign.center,
             style: platformThemeData(
                      context,
-                     material: (data) => data.textTheme.headline5,
-                     cupertino: (data) => data.textTheme.navTitleTextStyle,
+                     material: (data) => data.own().appTitleMedium,
+                     cupertino: (data) => data.own().appTitleMedium,
                    ),
           ),
           leading: PlatformIconButton(
@@ -69,7 +69,10 @@ class SettingsView extends StatelessWidget {
               vertical: 5,
             ),
             decoration: BoxDecoration(
-              color: Colors.blue[100],
+              color: platformThemeData(
+                context, 
+                material: (data) => Color(appSurfaceVariantLight) , 
+                cupertino: (data) => Color(appCupertinoSurfaceVariant.value) ,),
               borderRadius: const BorderRadius.all(Radius.circular(20)),
             ),
             child: DropdownButton<ThemeMode>(
@@ -84,8 +87,8 @@ class SettingsView extends StatelessWidget {
                     'System Theme',
                   style: platformThemeData(
                      context,
-                     material: (data) => data.textTheme.headline5,
-                     cupertino: (data) => data.textTheme.navTitleTextStyle,
+                     material: (data) => data.own().appLabelLarge,
+                     cupertino: (data) => data.own().appLabelLarge,
                    ),
                   ),
                 ),
@@ -95,8 +98,8 @@ class SettingsView extends StatelessWidget {
                     'Light Theme',
                   style: platformThemeData(
                      context,
-                     material: (data) => data.textTheme.headline5,
-                     cupertino: (data) => data.textTheme.navTitleTextStyle,
+                     material: (data) => data.own().appLabelLarge,
+                     cupertino: (data) => data.own().appLabelLarge,
                    ),),
                 ),
                 DropdownMenuItem(
@@ -105,8 +108,8 @@ class SettingsView extends StatelessWidget {
                     'Dark Theme',
                   style: platformThemeData(
                      context,
-                     material: (data) => data.textTheme.headline5,
-                     cupertino: (data) => data.textTheme.navTitleTextStyle,
+                     material: (data) => data.own().appLabelLarge,
+                     cupertino: (data) => data.own().appLabelLarge,
                    ),),
                 ),
               ],

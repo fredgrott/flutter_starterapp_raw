@@ -92,6 +92,10 @@ class AppTextThemeFields {
   }
 }
 
+extension AppTextThemeExt on ThemeData {
+
+}
+
 extension AppBlackTextThemeExtension on Typography {
   static final Map<TextTheme, AppTextThemeFields> _own = {};
 

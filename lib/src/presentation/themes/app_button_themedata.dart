@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+
 ButtonThemeData appMaterialLightButtonThemeData = ButtonThemeData(
   textTheme: ButtonTextTheme.primary,
   padding: EdgeInsetsGeometry.infinity,
@@ -29,5 +30,5 @@ ButtonThemeData appCupertinoButtonThemeData = ButtonThemeData(
 RoundedRectangleBorder appRoundedRectangleButtonBorder = const RoundedRectangleBorder(
    // ignore: avoid_redundant_argument_values
    side: BorderSide.none,
-   borderRadius: BorderRadius.all(Radius.circular(10)),
+   borderRadius: BorderRadius.all(Radius.circular(8)),
 );

@@ -12,7 +12,9 @@ import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys
 import 'package:flutter_starterapp_raw/src/presentation/features/details/ui/sampleitem_detailsview.dart';
 
 import 'package:flutter_starterapp_raw/src/presentation/features/settings/ui/settingsview.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_typography.dart';
 import 'package:lifecycle/lifecycle.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_text_theme_ext.dart';
 
 class SampleItemListView extends StatelessWidget {
   static const routeName = '/';
@@ -45,15 +47,15 @@ class SampleItemListView extends StatelessWidget {
             'Sample Items',
             textAlign: TextAlign.center,
             key: appBarTitleKey,
-            // To get correct Apple Typography and Correct 
-            // Material Typography with material based 
-            // cupertino themes we have to hard wire 
+            // To get correct Apple Typography and Correct
+            // Material Typography with material based
+            // cupertino themes we have to hard wire
             // text styles
             style: platformThemeData(
-                     context,
-                     material: (data) => data.textTheme.headline5,
-                     cupertino: (data) => data.textTheme.navTitleTextStyle,
-                   ),
+              context,
+              material: (data) => data.own().appTitleLarge,
+              cupertino: (data) => data.own().appTitleLarge,
+            ),
           ),
           trailingActions: [
             PlatformIconButton(
@@ -65,23 +67,23 @@ class SampleItemListView extends StatelessWidget {
                 Navigator.restorablePushNamed(
                   context,
                   SettingsView.routeName,
-                  
                 );
               },
             ),
           ],
-
-
-          cupertino: (_, __,) => CupertinoNavigationBarData(
-             // Issue with cupertino where a bar with no transparency
-             // will push the list down. Adding some alpha value fixes it (in a hacky way)
-             backgroundColor: Colors.blue.withAlpha(254),
-           ),
-
+          cupertino: (
+            _,
+            __,
+          ) =>
+              CupertinoNavigationBarData(
+            // Issue with cupertino where a bar with no transparency
+            // will push the list down. Adding some alpha value fixes it (in a hacky way)
+            backgroundColor: Colors.blue.withAlpha(254),
+          ),
         ),
-        // If we look at the examples that are now live and linked 
-        // to flutter api is should be this instead of what the unmodified 
-        // Flutter App Skeleton Template has as far as card and listtiles 
+        // If we look at the examples that are now live and linked
+        // to flutter api is should be this instead of what the unmodified
+        // Flutter App Skeleton Template has as far as card and listtiles
         // in a Material Card.
         body: Center(
           child: Card(
@@ -89,7 +91,7 @@ class SampleItemListView extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 ListView.builder(
-                  // so we have such things as 
+                  // so we have such things as
                   // scroll position remembered in the app
                   restorationId: 'sampleItemListView',
                   itemCount: items.length,
@@ -100,10 +102,9 @@ class SampleItemListView extends StatelessWidget {
                     final item = items[index];
 
                     return ScrollViewItemLifecycleWrapper(
-                       onLifecycleEvent: (LifecycleEvent event) {
+                      onLifecycleEvent: (LifecycleEvent event) {
                         log('DatailsPage(item$index)#${event.toString()}');
                       },
-
                       wantKeepAlive: false,
                       child: ListTile(
                         key: listTileKey,
@@ -111,9 +112,9 @@ class SampleItemListView extends StatelessWidget {
                           'SampleItem ${item.id}',
                           key: tileTitleKey,
                           style: platformThemeData(
-                                   context,
-                                   material: (data) => data.textTheme.headline5,
-                                   cupertino: (data) => data.textTheme.navTitleTextStyle,
+                            context,
+                            material: (data) => data.own().appLabelLarge,
+                            cupertino: (data) => data.own().appLabelLarge,
                           ),
                         ),
                         leading: const CircleAvatar(
@@ -131,22 +132,14 @@ class SampleItemListView extends StatelessWidget {
                           );
                         },
                       ),
-
                     );
                   },
-
                 ),
               ],
             ),
-
-          ) ,
+          ),
         ),
-
-
-
       ),
-      
-      
     );
   }
 }

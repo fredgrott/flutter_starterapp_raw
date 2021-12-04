@@ -4,18 +4,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 IconThemeData appMaterialLightSelectedIconThemeData = IconThemeData(
   color: appMaterialLightScheme.primaryContainer as Color,
-  size: 32,
+  size: appIconSize,
 );
 
 IconThemeData appMaterialDarkSelectedIconThemeData = IconThemeData(
   color: appMaterialDarkScheme.primaryContainer as Color,
-  size: 32,
+  size: appIconSize,
 );
 
 IconThemeData appCupertinoSelectedIconThemeData = IconThemeData(
   color: appCupertinoScheme.primaryContainer as Color,
-  size: 32,
+  size: appIconSize,
 );

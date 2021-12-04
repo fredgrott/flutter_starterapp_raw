@@ -4,18 +4,19 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 IconThemeData appMaterialLightIconThemeData = IconThemeData(
-  color: appPrimaryLight as Color,
-  size: 32,
+  color: appMaterialLightScheme.primary as Color,
+  size: appIconSize,
 );
 
 IconThemeData appMaterialDarkIconThemeData = IconThemeData(
-  color: appPrimaryDark as Color,
-  size: 32,
+  color: appMaterialDarkScheme.primary as Color,
+  size: appIconSize,
 );
 
 IconThemeData appCupertinoIconThemeData = IconThemeData(
-  color: appCupertinoPrimary,
-  size: 32,
+  color: appCupertinoScheme.primary as Color,
+  size: appIconSize,
 );

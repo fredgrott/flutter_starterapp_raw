@@ -19,8 +19,9 @@ import 'package:flutter_starterapp_raw/src/presentation/features/home/ui/samplei
 import 'package:flutter_starterapp_raw/src/presentation/features/settings/controllers/settings_controller.dart';
 
 import 'package:flutter_starterapp_raw/src/presentation/features/settings/ui/settingsview.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/material_themedata.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/materialbasedcupertinotheme.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_data.dart';
+
+
 import 'package:lifecycle/lifecycle.dart';
 
 class MyApp extends StatelessWidget {
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
             log("App: ${event.toString()}");
           },
           child: Theme(
-            data: appBrightness == Brightness.light ? materialLightMaterialThemeData : materialDarkMaterialThemeData,
+            data: appBrightness == Brightness.light ? appLightMaterialThemeData : appDarkMaterialThemeData,
             child: PlatformProvider(
             settings: PlatformSettingsData(iosUsesMaterialWidgets: true),
             builder: (context) => PlatformApp(
@@ -99,9 +100,9 @@ class MyApp extends StatelessWidget {
                 __,
               ) =>
                   MaterialAppData(
-                theme: materialLightMaterialThemeData,
+                theme: appLightMaterialThemeData,
                 themeMode: settingsController.themeMode,
-                darkTheme: materialDarkMaterialThemeData,
+                darkTheme: appDarkMaterialThemeData,
                 //shortcuts:
                 //actions:
               ),
@@ -110,7 +111,7 @@ class MyApp extends StatelessWidget {
                 __,
               ) =>
                   CupertinoAppData(
-                theme: materialBasedCupertinoThemeData,
+                theme: appMaterialBasedCupertinoThemeData,
                 //actions:
                 // shortcuts:
               ),

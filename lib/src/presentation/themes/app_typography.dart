@@ -3,18 +3,65 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'app_texttheme_extension.dart';
 
 // Gist: Typography For MD3, see:
 //       https://m3.material.io/styles/typography/tokens
-//       Note that we additionaly have line height co compute 
-//       everywhere font size is set and is computed as 
+//       Note that we additionaly have line height co compute
+//       everywhere font size is set and is computed as
 //       line-height from MD3 spec above divided by font size.
-//       For example Display large font line height is 64  and 
+//       For example Display large font line height is 64  and
 //       font size is 57 so 64/57 = 1.12 setting height value
-
+//
+//       Variation from MD3 spec? I am setting color to
+//       tertiary light and dark and relying upon extra
+//       weights to simulate black and white variations under md2.
+//
+//       Need to be careful about font-weights as do not want to
+//       drastically add to download sizes, so doing simulated
+//       font weight where I specify the extra font weight variations
+//       and its simulated font painting wise.
+//
+//       Font Weights That Can Be used Are:
+//             thin        100
+//             ultra light 200
+//             light       300
+//             regular     400
+//             medium      500
+//             semi-bold   600
+//             bold        700
+//             extra-bold  800
+//             black       900
+//             extra-black 950
+//
+//       remember folks the googl font web api is limited to only
+//       a few of those choices so you do not get all the font variations
+//       by downloading form google fonts.
+//
+//       Per the MD2 version of the flutter typography class we have
+//                   headline 1 black54  300
+//                   headline2  black54  300
+//                   headline3 black54   400
+//                   headline4 black54   400
+//                  headline5  black87   400
+//                  headline6  black87   500
+//                  body1      black87   400
+//                  body2      black87   400
+//                  subtitle1  black87   400
+//                  subititle2 black     500
+//                  caption    black54   400
+//                  button     black87   500
+//                  overline   black     400
+//
+//       
+//    Only problem is only a few match up to a new MD3 font mapping.
+//    I only changed DL to 600 and DM to 500. I will do rest of 
+//    modifications in the UI components.
+//         
+//          
 
 Typography appTypography = Typography(
   black: appBlackTextTheme,
@@ -23,88 +70,101 @@ Typography appTypography = Typography(
   tall: appTallTextTheme,
   dense: appDenseTextTheme,
 )
-  ..addBlackThemeFields(AppTextThemeFields(
-    appTitleLarge: appBlackTitleLarge,
-    appTitleMedium: appBlackTitleMedium,
-    appTitleSmall: appBlackTitleSmall,
-    appDisplayLarge: appBlackDisplayLarge,
-    appDisplayMedium: appBlackDisplayMedium,
-    appDisplaySmall: appBlackDisplaySmall,
-    appBodyLarge: appBlackBodyLarge,
-    appBodyMedium: appBlackBodyMedium,
-    appBodySmall: appBlackBodySmall,
-    appLabelLarge: appBlackLabelLarge,
-    appLabelMedium: appBlackLabelMedium,
-    appLabelSmall: appBlackLabelSmall,
-    appHeadlineLarge: appBlackHeadlineLarge,
-    appHeadlineMedium: appBlackHeadlineMedium,
-    appHeadlineSmall: appBlackHeadlineSmall,
-  ),)
-  ..addWhiteThemeFields(AppTextThemeFields(
-    appBodyLarge: appWhiteBodyLarge,
-    appBodyMedium: appWhiteBodyMedium,
-    appBodySmall: appWhiteBodySmall,
-    appDisplayLarge: appWhiteDisplayLarge,
-    appDisplayMedium: appWhiteDisplayMedium,
-    appDisplaySmall: appWhiteDisplaySmall,
-    appHeadlineLarge: appWhiteHeadlineLarge,
-    appHeadlineMedium: appWhiteHeadlineMedium,
-    appHeadlineSmall: appWhiteHeadlineSmall,
-    appTitleLarge: appWhiteTitleLarge,
-    appTitleMedium: appWhiteTitleMedium,
-    appTitleSmall: appWhiteTitleSmall,
-    appLabelLarge: appWhiteLabelLarge,
-    appLabelMedium: appWhiteLabelMedium,
-    appLabelSmall: appWhiteLabelSmall,
-  ),)..addDenseThemeFields(AppTextThemeFields(
-    appBodyLarge: appDenseBodyLarge,
-    appBodyMedium: appDenseBodyMedium,
-    appBodySmall: appDenseBodySmall,
-    appDisplayLarge: appDenseDisplayLarge,
-    appDisplayMedium: appDenseDisplayMedium,
-    appDisplaySmall: appDenseDisplaySmall,
-    appHeadlineLarge: appDenseHeadlineLarge,
-    appHeadlineMedium: appDenseHeadlineMedium,
-    appHeadlineSmall: appDenseHeadlineSmall,
-    appLabelLarge: appDenseLabelLarge,
-    appLabelMedium: appDenseLabelMedium,
-    appLabelSmall: appDenseLabelSmall,
-    appTitleLarge: appDenseTitleLarge,
-    appTitleMedium: appDenseTitleMedium,
-    appTitleSmall: appDenseTitleSmall,
-  ),)..addTallThemeFields(AppTextThemeFields(
-    appBodyLarge: appTallBodyLarge,
-    appBodyMedium: appTallBodyMedium,
-    appBodySmall: appTallBodySmall,
-    appDisplayLarge: appTallDisplayLarge,
-    appDisplayMedium: appTallDisplayMedium,
-    appDisplaySmall: appTallDisplaySmall,
-    appHeadlineLarge: appTallHeadlineLarge,
-    appHeadlineMedium: appTallHeadlineMedium,
-    appHeadlineSmall: appTallHeadlineSmall,
-    appLabelLarge: appTallLabelLarge,
-    appLabelMedium: appTallLabelMedium,
-    appLabelSmall: appTallLabelSmall,
-    appTitleLarge: appTallTitleLarge,
-    appTitleMedium: appTallTitleMedium,
-    appTitleSmall: appTallTitleSmall,
-  ),)..addEnglishLikeThemeFields(AppTextThemeFields(
-    appBodyLarge: appEnglishLikeBodyLarge,
-    appBodyMedium: appEnglishLikeBodyMedium,
-    appBodySmall: appEnglishLikeBodySmall,
-    appDisplayLarge: appEnglishLikeDisplayLarge,
-    appDisplayMedium: appEnglishLikeDisplayMedium,
-    appDisplaySmall: appEnglishLikeDisplaySmall,
-    appHeadlineLarge: appEnglishLikeHeadlineLarge,
-    appHeadlineMedium: appEnglishLikeHeadlineMedium,
-    appHeadlineSmall: appEnglishLikeHeadlineSmall,
-    appLabelLarge: appEnglishLikeLabelLarge,
-    appLabelMedium: appEnglishLikeLabelMedium,
-    appLabelSmall: appEnglishLikeLabelSmall,
-    appTitleLarge: appEnglishLikeTitleLarge,
-    appTitleMedium: appEnglishLikeTitelMedium,
-    appTitleSmall: appEnglishLikeTitleSmall,
-  ),);
+  ..addBlackThemeFields(
+    AppTextThemeFields(
+      appTitleLarge: appBlackTitleLarge,
+      appTitleMedium: appBlackTitleMedium,
+      appTitleSmall: appBlackTitleSmall,
+      appDisplayLarge: appBlackDisplayLarge,
+      appDisplayMedium: appBlackDisplayMedium,
+      appDisplaySmall: appBlackDisplaySmall,
+      appBodyLarge: appBlackBodyLarge,
+      appBodyMedium: appBlackBodyMedium,
+      appBodySmall: appBlackBodySmall,
+      appLabelLarge: appBlackLabelLarge,
+      appLabelMedium: appBlackLabelMedium,
+      appLabelSmall: appBlackLabelSmall,
+      appHeadlineLarge: appBlackHeadlineLarge,
+      appHeadlineMedium: appBlackHeadlineMedium,
+      appHeadlineSmall: appBlackHeadlineSmall,
+    ),
+  )
+  ..addWhiteThemeFields(
+    AppTextThemeFields(
+      appBodyLarge: appWhiteBodyLarge,
+      appBodyMedium: appWhiteBodyMedium,
+      appBodySmall: appWhiteBodySmall,
+      appDisplayLarge: appWhiteDisplayLarge,
+      appDisplayMedium: appWhiteDisplayMedium,
+      appDisplaySmall: appWhiteDisplaySmall,
+      appHeadlineLarge: appWhiteHeadlineLarge,
+      appHeadlineMedium: appWhiteHeadlineMedium,
+      appHeadlineSmall: appWhiteHeadlineSmall,
+      appTitleLarge: appWhiteTitleLarge,
+      appTitleMedium: appWhiteTitleMedium,
+      appTitleSmall: appWhiteTitleSmall,
+      appLabelLarge: appWhiteLabelLarge,
+      appLabelMedium: appWhiteLabelMedium,
+      appLabelSmall: appWhiteLabelSmall,
+    ),
+  )
+  ..addDenseThemeFields(
+    AppTextThemeFields(
+      appBodyLarge: appDenseBodyLarge,
+      appBodyMedium: appDenseBodyMedium,
+      appBodySmall: appDenseBodySmall,
+      appDisplayLarge: appDenseDisplayLarge,
+      appDisplayMedium: appDenseDisplayMedium,
+      appDisplaySmall: appDenseDisplaySmall,
+      appHeadlineLarge: appDenseHeadlineLarge,
+      appHeadlineMedium: appDenseHeadlineMedium,
+      appHeadlineSmall: appDenseHeadlineSmall,
+      appLabelLarge: appDenseLabelLarge,
+      appLabelMedium: appDenseLabelMedium,
+      appLabelSmall: appDenseLabelSmall,
+      appTitleLarge: appDenseTitleLarge,
+      appTitleMedium: appDenseTitleMedium,
+      appTitleSmall: appDenseTitleSmall,
+    ),
+  )
+  ..addTallThemeFields(
+    AppTextThemeFields(
+      appBodyLarge: appTallBodyLarge,
+      appBodyMedium: appTallBodyMedium,
+      appBodySmall: appTallBodySmall,
+      appDisplayLarge: appTallDisplayLarge,
+      appDisplayMedium: appTallDisplayMedium,
+      appDisplaySmall: appTallDisplaySmall,
+      appHeadlineLarge: appTallHeadlineLarge,
+      appHeadlineMedium: appTallHeadlineMedium,
+      appHeadlineSmall: appTallHeadlineSmall,
+      appLabelLarge: appTallLabelLarge,
+      appLabelMedium: appTallLabelMedium,
+      appLabelSmall: appTallLabelSmall,
+      appTitleLarge: appTallTitleLarge,
+      appTitleMedium: appTallTitleMedium,
+      appTitleSmall: appTallTitleSmall,
+    ),
+  )
+  ..addEnglishLikeThemeFields(
+    AppTextThemeFields(
+      appBodyLarge: appEnglishLikeBodyLarge,
+      appBodyMedium: appEnglishLikeBodyMedium,
+      appBodySmall: appEnglishLikeBodySmall,
+      appDisplayLarge: appEnglishLikeDisplayLarge,
+      appDisplayMedium: appEnglishLikeDisplayMedium,
+      appDisplaySmall: appEnglishLikeDisplaySmall,
+      appHeadlineLarge: appEnglishLikeHeadlineLarge,
+      appHeadlineMedium: appEnglishLikeHeadlineMedium,
+      appHeadlineSmall: appEnglishLikeHeadlineSmall,
+      appLabelLarge: appEnglishLikeLabelLarge,
+      appLabelMedium: appEnglishLikeLabelMedium,
+      appLabelSmall: appEnglishLikeLabelSmall,
+      appTitleLarge: appEnglishLikeTitleLarge,
+      appTitleMedium: appEnglishLikeTitelMedium,
+      appTitleSmall: appEnglishLikeTitleSmall,
+    ),
+  );
 
 TextTheme appBlackTextTheme = const TextTheme();
 
@@ -121,70 +181,70 @@ TextTheme appEnglishLikeTextTheme = const TextTheme();
 TextStyle appBlackDisplayLarge = TextStyle(
   debugLabel: "Black Display Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackDisplayMedium = TextStyle(
   debugLabel: "Black Display Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackDisplaySmall = TextStyle(
   debugLabel: "Black Display Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackHeadlineLarge = TextStyle(
   debugLabel: "Black Headline Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackHeadlineMedium = TextStyle(
   debugLabel: "Black Headline Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackHeadlineSmall = TextStyle(
   debugLabel: "Black Headline Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackTitleLarge = TextStyle(
   debugLabel: "Black Title Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackTitleMedium = TextStyle(
   debugLabel: "Black Title Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackTitleSmall = TextStyle(
   debugLabel: "Black Title Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackBodyLarge = TextStyle(
   debugLabel: "Black Body Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
@@ -198,28 +258,28 @@ TextStyle appBlackBodyMedium = TextStyle(
 TextStyle appBlackBodySmall = TextStyle(
   debugLabel: "Black Body Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackLabelLarge = TextStyle(
   debugLabel: "Black Label Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackLabelMedium = TextStyle(
   debugLabel: "Black Label Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appBlackLabelSmall = TextStyle(
   debugLabel: "Black Label Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.black54,
+  color: appMaterialLightScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
@@ -228,115 +288,113 @@ TextStyle appBlackLabelSmall = TextStyle(
 TextStyle appWhiteDisplayLarge = TextStyle(
   debugLabel: "White Display Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteDisplayMedium = TextStyle(
   debugLabel: "White Display Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteDisplaySmall = TextStyle(
   debugLabel: "White Display Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteHeadlineLarge = TextStyle(
   debugLabel: "White Headline Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteHeadlineMedium = TextStyle(
   debugLabel: "White Headline Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteHeadlineSmall = TextStyle(
   debugLabel: "White Headline Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteTitleLarge = TextStyle(
   debugLabel: "White Title Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteTitleMedium = TextStyle(
   debugLabel: "White Title Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteTitleSmall = TextStyle(
   debugLabel: "White Title Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteBodyLarge = TextStyle(
   debugLabel: "White Body Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteBodyMedium = TextStyle(
   debugLabel: "White Body Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteBodySmall = TextStyle(
   debugLabel: "White Body Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteLabelLarge = TextStyle(
   debugLabel: "White Label Large",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteLabelMedium = TextStyle(
   debugLabel: "White Label Medium",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
 
 TextStyle appWhiteLabelSmall = TextStyle(
   debugLabel: "White Label Small",
   fontFamily: GoogleFonts.notoSans().fontFamily,
-  color: Colors.white70,
+  color: appMaterialDarkScheme.tertiary as Color,
   decoration: TextDecoration.none,
 );
-
-
 
 TextStyle appTallDisplayLarge = const TextStyle(
   debugLabel: "Tall Display Large",
   inherit: false,
   fontSize: 57,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w600,
   textBaseline: TextBaseline.alphabetic,
   height: 1.12,
 );
@@ -345,7 +403,7 @@ TextStyle appTallDisplayMedium = const TextStyle(
   debugLabel: "Tall Display Medium",
   inherit: false,
   fontSize: 45,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
   height: 1.16,
 );
@@ -470,7 +528,7 @@ TextStyle appTallLabelSmall = const TextStyle(
 TextStyle appDenseDisplayLarge = const TextStyle(
   debugLabel: "Dense Display Large",
   fontSize: 57,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w600,
   textBaseline: TextBaseline.ideographic,
   height: 1.22,
 );
@@ -478,7 +536,7 @@ TextStyle appDenseDisplayLarge = const TextStyle(
 TextStyle appDenseDisplayMedium = const TextStyle(
   debugLabel: "Dense Display Medium",
   fontSize: 45,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.ideographic,
   height: 1.16,
 );
@@ -590,7 +648,7 @@ TextStyle appDenseLabelSmall = const TextStyle(
 TextStyle appEnglishLikeDisplayLarge = const TextStyle(
   debugLabel: "English Like Display Large",
   fontSize: 57,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w600,
   textBaseline: TextBaseline.alphabetic,
   height: 1.12,
   letterSpacing: 0.0,
@@ -599,7 +657,7 @@ TextStyle appEnglishLikeDisplayLarge = const TextStyle(
 TextStyle appEnglishLikeDisplayMedium = const TextStyle(
   debugLabel: "English Like Display Medium",
   fontSize: 45,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w500,
   textBaseline: TextBaseline.alphabetic,
   height: 1.16,
   letterSpacing: 0.0,

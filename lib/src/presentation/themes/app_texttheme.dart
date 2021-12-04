@@ -3,11 +3,10 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'app_text_theme_ext.dart';
 
-ScrollbarThemeData cupertinoLightScrollbarThemeData = const ScrollbarThemeData(
-  showTrackOnHover: true,
-  isAlwaysShown: true,
-  radius: Radius.circular(5),
-  minThumbLength: 2,
-  interactive: true,
-);
+TextTheme appMaterialLightTextTheme = const TextTheme();
+
+TextTheme appMaterialDarkTextTheme = const TextTheme();
+
+TextTheme appCupertinoTextTheme = const TextTheme();

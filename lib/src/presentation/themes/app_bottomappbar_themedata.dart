@@ -4,18 +4,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 BottomAppBarTheme appMaterialLightBottomAppBarTheme = BottomAppBarTheme(
   color: appMaterialLightScheme.background as Color,
-  elevation: 4,
+  elevation: appElevation,
 );
 
 BottomAppBarTheme appMaterialDarkBottomAppBarTheme = BottomAppBarTheme(
   color: appMaterialDarkScheme.background as Color,
-  elevation: 4,
+  elevation: appElevation,
 );
 
 BottomAppBarTheme appCupertinoBottomAppBarTheme = BottomAppBarTheme(
   color: appCupertinoScheme.background as Color,
-  elevation: 4,
+  elevation: appElevation,
 );

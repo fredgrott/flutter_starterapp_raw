@@ -8,6 +8,7 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
 
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colorschemes.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_icon_themedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 AppBarTheme appMaterialLightAppBarTheme = AppBarTheme(
   //brightness: Brightness.light,
@@ -15,7 +16,7 @@ AppBarTheme appMaterialLightAppBarTheme = AppBarTheme(
   backgroundColor: appMaterialLightColorScheme.background,
   // foreground will be text color which needs the tertiary color
   foregroundColor: appMaterialLightScheme.tertiary as Color,
-  elevation: 4,
+  elevation: appElevation,
   shadowColor: appMaterialLightScheme.shadow as Color,
   centerTitle: true,
   //textTheme:
@@ -29,7 +30,7 @@ AppBarTheme appMaterialDarkAppBarTheme = AppBarTheme(
   backgroundColor: appMaterialDarkColorScheme.background,
   // foreground will be text color which needs the tertiary color
   foregroundColor: appMaterialDarkScheme.tertiary as Color,
-  elevation: 4,
+  elevation: appElevation,
   shadowColor: appMaterialDarkScheme.shadow as Color,
   centerTitle: true,
   titleTextStyle: appAppBarTextStyle,
@@ -43,7 +44,7 @@ AppBarTheme appCupertinoAppBarTheme = AppBarTheme(
   backgroundColor: appCupertinoColorScheme.background,
   // foreground will be text color which needs the tertiary color
   foregroundColor: appCupertinoScheme.tertiary as Color,
-  elevation: 4,
+  elevation: appElevation,
   shadowColor: appCupertinoScheme.shadow as Color,
   centerTitle: true,
   titleTextStyle: appAppBarTextStyle,

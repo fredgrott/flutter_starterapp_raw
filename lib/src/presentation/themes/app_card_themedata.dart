@@ -4,36 +4,37 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 CardTheme appMaterialLightCardTheme = CardTheme(
   clipBehavior: Clip.antiAlias,
-  color: appMaterialLightScheme.background as Color,
+  color: appMaterialLightScheme.inverseSurface as Color,
   shadowColor: appMaterialLightScheme.shadow as Color,
-  elevation: 4,
+  elevation: appElevation,
   margin: EdgeInsetsGeometry.infinity,
   shape: const RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(Radius.circular(10)),
+    borderRadius: BorderRadius.all(Radius.circular(8)),
   ),
 );
 
 CardTheme appMaterialDarkCardTheme = CardTheme(
   clipBehavior: Clip.antiAlias,
-  color: appMaterialDarkScheme.background as Color,
+  color: appMaterialDarkScheme.inverseSurface as Color,
   shadowColor: appMaterialDarkScheme.shadow as Color,
-  elevation: 4,
+  elevation: appElevation,
   margin: EdgeInsetsGeometry.infinity,
   shape: const RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(Radius.circular(10)),
+    borderRadius: BorderRadius.all(Radius.circular(8)),
   ),
 );
 
 CardTheme appCupertinoCardTheme = CardTheme(
   clipBehavior: Clip.antiAlias,
-  color: appCupertinoScheme.background as Color,
+  color: appCupertinoScheme.inverseSurface as Color,
   shadowColor: appCupertinoScheme.shadow as Color,
-  elevation: 4,
+  elevation: appElevation,
   margin: EdgeInsetsGeometry.infinity,
   shape: const RoundedRectangleBorder(
-    borderRadius: BorderRadius.all(Radius.circular(10)),
+    borderRadius: BorderRadius.all(Radius.circular(8)),
   ),
 );

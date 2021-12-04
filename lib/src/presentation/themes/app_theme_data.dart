@@ -2,6 +2,9 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+// Gist: Due to the Scheme class from material color utilities
+//       I only need text theme fields extensions to theme data.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_vars.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_appbars.dart';
@@ -10,24 +13,18 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/app_bottomnavigat
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_button_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_card_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
-
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colorschemes.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_divider_themedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_drawer_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_listtile_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_navigationrail_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_tabbar_themedata.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_typography.dart';
-import 'app_colorscheme_extension.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_text_styles.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_texttheme.dart';
+import 'app_text_theme_ext.dart';
 
-// Gist: UI flows in color roles:
-//              -Tertiary Tends to be App Text
-//              -Tertiary Container tends to be text containers within other UI units,
-//               example is a badge on a card with text as the badge color with be
-//               tertiary container and ontertiary container for text color
-//              -Primary UI butttons, card headers and footers
-//              -Neutrals, background, Surufaces, onSurfaces, outlines
 
-ThemeData appMaterialLightThemeData = ThemeData(
-  typography: appTypography,
+ThemeData appLightMaterialThemeData = ThemeData(
   colorScheme: appMaterialLightColorScheme,
   brightness: Brightness.light,
   visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -35,8 +32,6 @@ ThemeData appMaterialLightThemeData = ThemeData(
   primaryColorBrightness: Brightness.light,
   primaryColorLight: appMaterialLightColorScheme.primary,
   primaryColorDark: appMaterialDarkColorScheme.primary,
-  //accentColor:
-  //accentColorBrightness:
   canvasColor: appMaterialLightColorScheme.background,
   shadowColor: appMaterialLightScheme.shadow as Color,
   scaffoldBackgroundColor: appMaterialLightScheme.background as Color,
@@ -65,41 +60,41 @@ ThemeData appMaterialLightThemeData = ThemeData(
   navigationRailTheme: appMaterialLightNavRailThemeData,
   cardTheme: appMaterialLightCardTheme,
   listTileTheme: appMaterialLightListTileThemeData,
-)..addColorFields(
-    AppColorSchemeFields(
-      appPrimaryContainer: appMaterialLightScheme.primaryContainer as Color,
-      appOnPrimaryContainer: appMaterialLightScheme.onPrimaryContainer as Color,
-      appSecondaryContainer: appMaterialLightScheme.secondaryContainer as Color,
-      appOnSecondaryContainer:
-          appMaterialLightScheme.onSecondaryContainer as Color,
-      appTertiary: appMaterialLightScheme.tertiary as Color,
-      appOnTertiary: appMaterialLightScheme.onTertiary as Color,
-      appTertiaryContainer: appMaterialLightScheme.tertiaryContainer as Color,
-      appOnTertiaryContainer:
-          appMaterialLightScheme.onTertiaryContainer as Color,
-      appErrorContainer: appMaterialLightScheme.errorContainer as Color,
-      appOnErrorContainer: appMaterialLightScheme.onErrorContainer as Color,
-      appSurfaceVariant: appMaterialLightScheme.surfaceVariant as Color,
-      appOnSurfaceVariant: appMaterialLightScheme.onSurfaceVariant as Color,
-      appOutline: appMaterialLightScheme.outline as Color,
-      appShadow: appMaterialLightScheme.shadow as Color,
-      appInverseSurface: appMaterialLightScheme.inverseSurface as Color,
-      appOnInverseSurface: appMaterialLightScheme.inverseOnSurface as Color,
-      appInversePrimary: appMaterialLightScheme.inversePrimary as Color,
+  drawerTheme: appMaterialLightDrawerThemeData,
+  dividerTheme: appMaterialLightDividerThemeData,
+  textTheme: appMaterialLightTextTheme,
+)..addThemeDataTextFields(
+    AppThemeDataTextThemeFields(
+      appBodyLarge: appTextStyleBodyLargeMaterialLight,
+      appBodyMedium: appTextStyleBodyMediumMaterialLight,
+      appBodySmall: appTextStyleBodySmallMaterialLight,
+      appDisplayLarge: appTextStyleDisplayLargeMaterialLight,
+      appDisplayMedium: appTextStyleDisplayMediumMaterialLight,
+      appDisplaySmall: appTextStyleDisplaySmallMaterialLight,
+      appHeadlineLarge: appTextStyleHeadlineLargeMaterialLight,
+      appHeadlineMedium: appTextStyleHeadlineMediumMaterialLight,
+      appHeadlineSmall: appTextStyleHeadlineSmallMaterialLight,
+      appLabelLarge: appTextStyleLabelLargeMaterialLight,
+      appLabelMedium: appTextStyleLabelMediumMaterialLight,
+      appLabelSmall: appTextStyleLabelSmallMaterialLight ,
+      appTitleLarge: appTextStyleTitleLargeMaterialLight,
+      appTitleMedium: appTextStyleTitleMediumMaterialLight,
+      appTitleSmall: appTextStyleTitleSmallMaterialLight,
     ),
   );
 
-ThemeData appMaterialDarkThemeData = ThemeData(
-  typography: appTypography,
+
+
+
+
+ThemeData appDarkMaterialThemeData = ThemeData(
   colorScheme: appMaterialDarkColorScheme,
   brightness: Brightness.dark,
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  primaryColor: appMaterialDarkColorScheme.primary,
-  primaryColorBrightness: Brightness.light,
+  primaryColor: appMaterialLightColorScheme.primary,
+  primaryColorBrightness: Brightness.dark,
   primaryColorLight: appMaterialLightColorScheme.primary,
   primaryColorDark: appMaterialDarkColorScheme.primary,
-  //accentColor:
-  //accentColorBrightness:
   canvasColor: appMaterialDarkColorScheme.background,
   shadowColor: appMaterialDarkScheme.shadow as Color,
   scaffoldBackgroundColor: appMaterialDarkScheme.background as Color,
@@ -127,46 +122,40 @@ ThemeData appMaterialDarkThemeData = ThemeData(
   navigationRailTheme: appMaterialDarkNavRailThemeData,
   cardTheme: appMaterialDarkCardTheme,
   listTileTheme: appMaterialDarkListTileThemeData,
-)..addColorFields(
-    AppColorSchemeFields(
-      appPrimaryContainer: appMaterialDarkScheme.primaryContainer as Color,
-      appOnPrimaryContainer: appMaterialDarkScheme.onPrimaryContainer as Color,
-      appSecondaryContainer: appMaterialDarkScheme.secondaryContainer as Color,
-      appOnSecondaryContainer:
-          appMaterialDarkScheme.onSecondaryContainer as Color,
-      appTertiary: appMaterialDarkScheme.tertiary as Color,
-      appOnTertiary: appMaterialDarkScheme.onTertiary as Color,
-      appTertiaryContainer: appMaterialDarkScheme.tertiaryContainer as Color,
-      appOnTertiaryContainer:
-          appMaterialDarkScheme.onTertiaryContainer as Color,
-      appErrorContainer: appMaterialDarkScheme.errorContainer as Color,
-      appOnErrorContainer: appMaterialDarkScheme.onErrorContainer as Color,
-      appSurfaceVariant: appMaterialDarkScheme.surfaceVariant as Color,
-      appOnSurfaceVariant: appMaterialDarkScheme.onSurfaceVariant as Color,
-      appOutline: appMaterialDarkScheme.outline as Color,
-      appShadow: appMaterialDarkScheme.shadow as Color,
-      appInverseSurface: appMaterialDarkScheme.inverseSurface as Color,
-      appOnInverseSurface: appMaterialDarkScheme.inverseOnSurface as Color,
-      appInversePrimary: appMaterialDarkScheme.inversePrimary as Color,
+  drawerTheme: appMaterialDarkDrawerThemeData,
+  dividerTheme: appMaterialDarkDividerThemeData,
+  textTheme: appMaterialDarkTextTheme,
+)..addThemeDataTextFields(
+    AppThemeDataTextThemeFields(
+      appBodyLarge: appTextStyleBodyLargeMaterialDark,
+      appBodyMedium: appTextStyleBodyMediumMaterialDark,
+      appBodySmall: appTextStyleBodySmallMaterialDark,
+      appDisplayLarge: appTextStyleDisplayLargeMaterialDark,
+      appDisplayMedium: appTextStyleDisplayMediumMaterialDark,
+      appDisplaySmall: appTextStyleDisplaySmallMaterialDark,
+      appHeadlineLarge: appTextStyleHeadlineLargeMaterialDark,
+      appHeadlineMedium: appTextStyleHeadlineMediumMaterialDark,
+      appHeadlineSmall: appTextStyleHeadlineSmallMaterialDark,
+      appLabelLarge: appTextStyleLabelLargeMaterialDark,
+      appLabelMedium: appTextStyleLabelMediumMaterialDark,
+      appLabelSmall: appTextStyleLabelSmallMaterialDark,
+      appTitleLarge: appTextStyleTitleLargeMaterialDark,
+      appTitleMedium: appTextStyleTitleMediumMaterialDark,
+      appTitleSmall: appTextStyleTitleSmallMaterialDark,
     ),
   );
 
-MaterialBasedCupertinoThemeData appMaterialBasedCupertinoThemeData =
-    MaterialBasedCupertinoThemeData(
-  materialTheme: appCupertinoThemeData,
-);
+
+
 
 ThemeData appCupertinoThemeData = ThemeData(
-  typography: appTypography,
   colorScheme: appCupertinoColorScheme,
   brightness: appBrightness,
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  primaryColor: appCupertinoColorScheme.primary,
-  primaryColorBrightness: Brightness.light,
-  primaryColorLight: appCupertinoColorScheme.primary,
-  primaryColorDark: appCupertinoColorScheme.primary,
-  //accentColor:
-  //accentColorBrightness:
+  primaryColor: appMaterialLightColorScheme.primary,
+  primaryColorBrightness: appBrightness,
+  primaryColorLight: appMaterialLightColorScheme.primary,
+  primaryColorDark: appMaterialDarkColorScheme.primary,
   canvasColor: appCupertinoColorScheme.background,
   shadowColor: appCupertinoScheme.shadow as Color,
   scaffoldBackgroundColor: appCupertinoScheme.background as Color,
@@ -194,24 +183,29 @@ ThemeData appCupertinoThemeData = ThemeData(
   navigationRailTheme: appCupertinoNavRailThemeData,
   cardTheme: appCupertinoCardTheme,
   listTileTheme: appCupertinoListTileThemeData,
-)..addColorFields(
-    AppColorSchemeFields(
-      appPrimaryContainer: appCupertinoScheme.primaryContainer as Color,
-      appOnPrimaryContainer: appCupertinoScheme.onPrimaryContainer as Color,
-      appSecondaryContainer: appCupertinoScheme.secondaryContainer as Color,
-      appOnSecondaryContainer: appCupertinoScheme.onSecondaryContainer as Color,
-      appTertiary: appCupertinoScheme.tertiary as Color,
-      appOnTertiary: appCupertinoScheme.onTertiary as Color,
-      appTertiaryContainer: appCupertinoScheme.tertiaryContainer as Color,
-      appOnTertiaryContainer: appCupertinoScheme.onTertiaryContainer as Color,
-      appErrorContainer: appCupertinoScheme.errorContainer as Color,
-      appOnErrorContainer: appCupertinoScheme.onErrorContainer as Color,
-      appSurfaceVariant: appCupertinoScheme.surfaceVariant as Color,
-      appOnSurfaceVariant: appCupertinoScheme.onSurfaceVariant as Color,
-      appOutline: appCupertinoScheme.outline as Color,
-      appShadow: appCupertinoScheme.shadow as Color,
-      appInverseSurface: appCupertinoScheme.inverseSurface as Color,
-      appOnInverseSurface: appCupertinoScheme.inverseOnSurface as Color,
-      appInversePrimary: appCupertinoScheme.inversePrimary as Color,
-    ),
-  );
+  drawerTheme: appCupertinoDrawerThemeData,
+  dividerTheme: appCupertinoDividerThemeData,
+  textTheme: appCupertinoTextTheme,
+);
+
+
+MaterialBasedCupertinoThemeData appMaterialBasedCupertinoThemeData =
+    MaterialBasedCupertinoThemeData(
+  materialTheme: appCupertinoThemeData,
+)..addThemeDataTextFields(AppThemeDataTextThemeFields(
+  appBodyLarge: appTextStyleBodyLargeCupertino,
+        appBodyMedium: appTextStyleBodyMediumCupertino,
+        appBodySmall: appTextStyleBodySmallCupertino,
+        appDisplayLarge: appTextStyleDisplayLargeCupertino,
+        appDisplayMedium: appTextStyleDisplayMediumCupertino,
+        appDisplaySmall: appTextStyleDisplaySmallCupertino,
+        appHeadlineLarge: appTextStyleHeadlineLargeCupertino,
+        appHeadlineMedium: appTextStyleHeadlineMediumCupertino,
+        appHeadlineSmall: appTextStyleHeadlineSmallCupertino,
+        appLabelLarge: appTextStyleLabelLargeCupertino,
+        appLabelMedium: appTextStyleLabelMediumCupertino,
+        appLabelSmall: appTextStyleLabelSmallCupertino,
+        appTitleLarge: appTextStyleTitleLargeCupertino,
+        appTitleMedium: appTextStyleTitleMediumCupertino,
+        appTitleSmall: appTextStyleTitleSmallCupertino,
+),);

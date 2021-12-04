@@ -6,13 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_selected_icon_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_selectedlabelstyle.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_unselectedicon_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_unselectedlabelstyle.dart';
 
 NavigationRailThemeData appMaterialLightNavRailThemeData =
     NavigationRailThemeData(
       backgroundColor: appMaterialLightScheme.background as Color,
-      elevation: 4,
+      elevation: appElevation,
       unselectedLabelTextStyle: appMaterialLightUnselectedLabelStyle,
       selectedLabelTextStyle: appMaterialLightSelectedLabelStyle,
       unselectedIconTheme: appMaterialLightUnselectedIconThemeData,
@@ -23,7 +24,7 @@ NavigationRailThemeData appMaterialLightNavRailThemeData =
 NavigationRailThemeData appMaterialDarkNavRailThemeData =
     NavigationRailThemeData(
   backgroundColor: appMaterialDarkScheme.background as Color,
-  elevation: 4,
+  elevation: appElevation,
   unselectedLabelTextStyle: appMaterialDarkUnselectedLabelStyle,
   selectedLabelTextStyle: appMaterialDarkSelectedLabelStyle,
   unselectedIconTheme: appMaterialDarkUnselectedIconThemeData,
@@ -34,7 +35,7 @@ NavigationRailThemeData appMaterialDarkNavRailThemeData =
 NavigationRailThemeData appCupertinoNavRailThemeData =
     NavigationRailThemeData(
   backgroundColor: appCupertinoScheme.background as Color,
-  elevation: 4,
+  elevation:appElevation,
   unselectedLabelTextStyle: appCupertinoUnselectedLabelStyle,
   selectedLabelTextStyle: appCupertinoSelectedLabelStyle,
   unselectedIconTheme: appCupertinoUnselectedIconThemeData,

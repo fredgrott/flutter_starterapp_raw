@@ -6,8 +6,9 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
+import 'package:flutter_starterapp_raw/src/presentation/features/home/ui/sampleitem_listview.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_text_theme_ext.dart';
 import 'package:lifecycle/lifecycle.dart';
 
 class SampleItemDetailsView extends StatelessWidget {
@@ -23,35 +24,45 @@ class SampleItemDetailsView extends StatelessWidget {
         log("SampleItemDetailsView: ${event.toString()}");
       },
 
-
       child: PlatformScaffold(
         widgetKey: scaffoldKey,
         appBar: PlatformAppBar(
+          leading: PlatformIconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+                // Navigate to the settings page. If the user leaves and returns
+                // to the app after it has been killed while running in the
+                // background, the navigation stack is restored.
+                Navigator.restorablePushNamed(
+                  context,
+                  SampleItemListView.routeName,
+                  
+                );
+            },
+          ),
           key: appBarKey,
           title: Text(
             'Item Details',
             key: appBarTitleKey,
             textAlign: TextAlign.center,
             style: platformThemeData(
-                     context,
-                     material: (data) => data.textTheme.headline5,
-                     cupertino: (data) => data.textTheme.navTitleTextStyle,
-                   ),
+              context,
+              material: (data) => data.own().appTitleLarge,
+              cupertino: (data) => data.own().appTitleLarge,
+            ),
           ),
         ),
         body: Center(
           child: Text(
             'More Information Here',
             style: platformThemeData(
-              context, 
-              material: (data)=>data.textTheme.bodyText1, 
-              cupertino: (data)=>data.textTheme.textStyle,
+              context,
+              material: (data) => data.own().appBodyLarge,
+              cupertino: (data) => data.own().appBodyLarge,
             ),
           ),
         ),
       ),
-      
-      
     );
   }
 }

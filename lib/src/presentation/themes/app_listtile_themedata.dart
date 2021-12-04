@@ -14,7 +14,7 @@ ListTileThemeData appMaterialLightListTileThemeData = ListTileThemeData(
   iconColor: appMaterialLightScheme.primary as Color,
   textColor: appMaterialLightScheme.tertiary as Color,
   contentPadding: EdgeInsetsGeometry.infinity,
-  tileColor: appMaterialLightScheme.background as Color,
+  tileColor: appMaterialLightScheme.surfaceVariant as Color,
   selectedTileColor: appMaterialLightScheme.primaryContainer as Color,
   selectedColor: appMaterialLightScheme.secondary as Color,
   horizontalTitleGap: 1,
@@ -31,7 +31,7 @@ ListTileThemeData appMaterialDarkListTileThemeData = ListTileThemeData(
   iconColor: appMaterialDarkScheme.primary as Color,
   textColor: appMaterialDarkScheme.tertiary as Color,
   contentPadding: EdgeInsetsGeometry.infinity,
-  tileColor: appMaterialDarkScheme.background as Color,
+  tileColor: appMaterialDarkScheme.surfaceVariant as Color,
   selectedTileColor: appMaterialDarkScheme.primaryContainer as Color,
   selectedColor: appMaterialDarkScheme.secondary as Color,
   horizontalTitleGap: 1,
@@ -48,7 +48,7 @@ ListTileThemeData appCupertinoListTileThemeData = ListTileThemeData(
   iconColor: appCupertinoScheme.primary as Color,
   textColor: appCupertinoScheme.tertiary as Color,
   contentPadding: EdgeInsetsGeometry.infinity,
-  tileColor: appCupertinoScheme.background as Color,
+  tileColor: appCupertinoScheme.surfaceVariant as Color,
   selectedTileColor: appCupertinoScheme.primaryContainer as Color,
   selectedColor: appCupertinoScheme.secondary as Color,
   horizontalTitleGap: 1,
@@ -56,4 +56,3 @@ ListTileThemeData appCupertinoListTileThemeData = ListTileThemeData(
   minLeadingWidth: 1,
   enableFeedback: true,
 );
-
