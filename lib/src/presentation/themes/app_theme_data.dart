@@ -12,6 +12,7 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/app_bottomappbar_
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_bottomnavigationbar_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_button_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_card_themedata.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_semantic_brand_colors.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colorschemes.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_divider_themedata.dart';
@@ -21,6 +22,8 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/app_navigationrai
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_tabbar_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_text_styles.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_texttheme.dart';
+
+import 'app_colorscheme_ext.dart';
 import 'app_text_theme_ext.dart';
 
 
@@ -81,7 +84,40 @@ ThemeData appLightMaterialThemeData = ThemeData(
       appTitleMedium: appTextStyleTitleMediumMaterialLight,
       appTitleSmall: appTextStyleTitleSmallMaterialLight,
     ),
-  );
+  )..addColorSchemeColorFields(AppColorSchemeColorFields(
+    appOnBackground: Color(appMaterialLightScheme.onBackground),
+    appErrorContainer: Color(appMaterialLightScheme.errorContainer),
+    appInversePrimary: Color(appMaterialLightScheme.inversePrimary),
+    appInverseSurface: Color(appMaterialLightScheme.inverseSurface),
+    appOnError: Color(appMaterialLightScheme.onError),
+    appOnErrorContainer: Color(appMaterialLightScheme.onErrorContainer),
+    appOnInverseSurface: Color(appMaterialLightScheme.inverseOnSurface),
+    appOnPrimary: Color(appMaterialLightScheme.onPrimary),
+    appOnPrimaryContainer: Color(appMaterialLightScheme.onPrimaryContainer),
+    appOnSecondary: Color(appMaterialLightScheme.onSecondary),
+    appOnSecondaryContainer: Color(appMaterialLightScheme.onSecondaryContainer),
+    appOnSurface: Color(appMaterialLightScheme.onSurface),
+    appOnSurfaceVariant: Color(appMaterialLightScheme.onSurfaceVariant),
+    appOnTertiary: Color(appMaterialLightScheme.onTertiary),
+    appOnTertiaryContainer: Color(appMaterialLightScheme.onTertiaryContainer),
+    appOutline: Color(appMaterialLightScheme.outline),
+    appShadow: Color(appMaterialLightScheme.shadow),
+    appSurfaceVariant: Color(appMaterialLightScheme.surfaceVariant),
+    appTertiary: Color(appMaterialLightScheme.tertiary),
+    appTertiaryContainer: Color(appMaterialLightScheme.tertiaryContainer),
+    appSemanticOnePrimary: Color(appBrandOnePrimaryLight),
+    appSemanticOneOnPrimary: Color(appBrandOneOnPrimaryLight),
+    appSemanticOnePrimaryContainer: Color(appBrandOnePrimaryContainerLight),
+    appSemanticOneOnPrimaryContainer: Color(appBrandOneOnPrimaryContainerLight),
+    appSemanticTwoPrimary: Color(appBrandTwoPrimaryLight),
+    appSemanticTwoOnPrimary: Color(appBrandTwoOnPrimaryLight),
+    appSemanticTwoPrimaryContainer: Color(appBrandTwoPrimaryContainerLight),
+    appSemanticTwoOnPrimaryContainer: Color(appBrandTwoOnPrimaryContainerLight),
+    appSemanticThreePrimary: Color(appBrandThreePrimaryLight),
+    appSemanticThreeOnPrimary: Color(appBrandThreeOnPrimaryLight),
+    appSemanticThreePrimaryContainer: Color(appBrandThreePrimaryContainerLight),
+    appSemanticThreeOnPrimaryContainer: Color(appBrandThreeOnPrimaryContainerLight),
+  ),);
 
 
 
@@ -143,7 +179,41 @@ ThemeData appDarkMaterialThemeData = ThemeData(
       appTitleMedium: appTextStyleTitleMediumMaterialDark,
       appTitleSmall: appTextStyleTitleSmallMaterialDark,
     ),
-  );
+  )..addColorSchemeColorFields(AppColorSchemeColorFields(
+    appOnBackground: Color(appMaterialDarkScheme.onBackground),
+    appErrorContainer: Color(appMaterialDarkScheme.errorContainer),
+    appInversePrimary: Color(appMaterialDarkScheme.inversePrimary),
+    appInverseSurface: Color(appMaterialDarkScheme.inverseSurface),
+    appOnError: Color(appMaterialDarkScheme.onError),
+    appShadow: Color(appMaterialDarkScheme.shadow),
+    appOnErrorContainer: Color(appMaterialDarkScheme.onErrorContainer),
+    appOnInverseSurface: Color(appMaterialDarkScheme.inverseOnSurface),
+    appOnPrimary: Color(appMaterialDarkScheme.onPrimary),
+    appOnPrimaryContainer: Color(appMaterialDarkScheme.onPrimaryContainer),
+    appOnSecondary: Color(appOnSecondaryDark),
+    appOnSecondaryContainer: Color(appOnSecondaryContainerDark),
+    appOnSurface: Color(appMaterialDarkScheme.onSurface),
+    appOnSurfaceVariant: Color(appMaterialDarkScheme.onSurfaceVariant),
+    appOnTertiary: Color(appMaterialDarkScheme.onTertiary),
+    appOnTertiaryContainer: Color(appMaterialDarkScheme.onTertiaryContainer),
+    appOutline: Color(appMaterialDarkScheme.outline),
+    appSurfaceVariant: Color(appMaterialDarkScheme.surfaceVariant),
+    appTertiary: Color(appMaterialDarkScheme.tertiary),
+    appTertiaryContainer: Color(appMaterialDarkScheme.tertiaryContainer),
+    appSemanticOnePrimary: Color(appBrandOnePrimaryDark),
+    appSemanticOneOnPrimary: Color(appBrandOneOnPrimaryDark),
+    appSemanticOnePrimaryContainer: Color(appBrandOnePrimaryContainerDark),
+    appSemanticOneOnPrimaryContainer: Color(appBrandOneOnPrimaryContainerDark),
+    appSemanticTwoPrimary: Color(appBrandTwoPrimaryDark),
+    appSemanticTwoOnPrimary: Color(appBrandTwoOnPrimaryDark),
+    appSemanticTwoPrimaryContainer: Color(appBrandTwoPrimaryContainerDark),
+    appSemanticTwoOnPrimaryContainer: Color(appBrandTwoOnPrimaryContainerDark),
+    appSemanticThreePrimary: Color(appBrandThreePrimaryDark),
+    appSemanticThreeOnPrimary: Color(appBrandThreeOnPrimaryDark),
+    appSemanticThreePrimaryContainer: Color(appBrandThreePrimaryContainerDark),
+    appSemanticThreeOnPrimaryContainer: Color(appBrandThreeOnPrimaryContainerDark),
+    
+    ),);
 
 
 
@@ -208,4 +278,39 @@ MaterialBasedCupertinoThemeData appMaterialBasedCupertinoThemeData =
         appTitleLarge: appTextStyleTitleLargeCupertino,
         appTitleMedium: appTextStyleTitleMediumCupertino,
         appTitleSmall: appTextStyleTitleSmallCupertino,
+),)..addColorSchemeColorFields(AppColorSchemeColorFields(
+  appErrorContainer: Color(appCupertinoScheme.errorContainer),
+  appInversePrimary: Color(appCupertinoScheme.inversePrimary),
+  appInverseSurface: Color(appCupertinoScheme.inverseSurface),
+  appOnBackground: Color(appCupertinoScheme.onBackground),
+  appOnError: Color(appCupertinoScheme.onError),
+  appOnErrorContainer: Color(appCupertinoScheme.onErrorContainer),
+  appOnInverseSurface: Color(appCupertinoScheme.inverseOnSurface),
+  appOnPrimary: Color(appCupertinoScheme.onPrimary),
+  appOnPrimaryContainer: Color(appCupertinoScheme.onPrimaryContainer),
+  appOnSecondary: Color(appCupertinoScheme.onSecondary),
+  appOnSecondaryContainer: Color(appCupertinoScheme.onSecondaryContainer),
+  appOnSurface: Color(appCupertinoScheme.onSurface),
+  appOnSurfaceVariant: Color(appCupertinoScheme.onSurfaceVariant),
+  appOnTertiary: Color(appCupertinoScheme.onTertiary),
+  appOnTertiaryContainer: Color(appCupertinoScheme.onTertiaryContainer),
+  appOutline: Color(appCupertinoScheme.outline),
+  appShadow: Color(appCupertinoScheme.shadow),
+  appSurfaceVariant: Color(appCupertinoScheme.surfaceVariant),
+  appTertiary: Color(appCupertinoScheme.tertiary),
+  appTertiaryContainer: Color(appCupertinoScheme.tertiaryContainer),
+  appSemanticOnePrimary: appBrandOnePrimaryCupertino,
+  appSemanticOneOnPrimary: appBrandOneOnPrimaryCupertino,
+  appSemanticOnePrimaryContainer: appBrandOnePrimaryContainerCupertino,
+  appSemanticOneOnPrimaryContainer: appBrandOneOnPrimaryContainerCupertino,
+  appSemanticTwoPrimary: appBrandTwoPrimaryCupertino,
+  appSemanticTwoOnPrimary: appBrandTwoOnPrimaryCupertino,
+  appSemanticTwoPrimaryContainer: appBrandTwoPrimaryContainerCupertino,
+  appSemanticTwoOnPrimaryContainer: appBrandTwoOnPrimaryContainerCupertino,
+  appSemanticThreePrimary: appBrandThreePrimaryCupertino,
+  appSemanticThreeOnPrimary: appBrandThreeOnPrimaryCupertino,
+  appSemanticThreePrimaryContainer: appBrandThreePrimaryContainerCupertino,
+  appSemanticThreeOnPrimaryContainer: appBrandThreeOnPrimaryContainerCupertino,
+
+
 ),);

@@ -11,6 +11,7 @@ import 'package:flutter_starterapp_raw/src/presentation/features/home/ui/samplei
 import 'package:flutter_starterapp_raw/src/presentation/features/settings/controllers/settings_controller.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_text_theme_ext.dart';
+
 import 'package:lifecycle/lifecycle.dart';
 
 class SettingsView extends StatelessWidget {
@@ -44,6 +45,8 @@ class SettingsView extends StatelessWidget {
             textAlign: TextAlign.center,
             style: platformThemeData(
                      context,
+                     // data.own().appTitleMedium.copyWith(color:)
+                     // will be the call on onBack onSurface onContainer
                      material: (data) => data.own().appTitleMedium,
                      cupertino: (data) => data.own().appTitleMedium,
                    ),

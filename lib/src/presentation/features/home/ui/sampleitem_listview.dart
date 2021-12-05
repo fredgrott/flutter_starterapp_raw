@@ -6,15 +6,12 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
-
 import 'package:flutter_starterapp_raw/src/domain/entity/sample_item.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
 import 'package:flutter_starterapp_raw/src/presentation/features/details/ui/sampleitem_detailsview.dart';
-
 import 'package:flutter_starterapp_raw/src/presentation/features/settings/ui/settingsview.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_typography.dart';
-import 'package:lifecycle/lifecycle.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_text_theme_ext.dart';
+import 'package:lifecycle/lifecycle.dart';
 
 class SampleItemListView extends StatelessWidget {
   static const routeName = '/';
