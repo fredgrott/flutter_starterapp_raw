@@ -3,7 +3,8 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_selected_icon_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_selectedlabelstyle.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
@@ -12,7 +13,7 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/app_unselectedlab
 
 NavigationRailThemeData appMaterialLightNavRailThemeData =
     NavigationRailThemeData(
-      backgroundColor: appMaterialLightScheme.background as Color,
+      backgroundColor: Color(appSystemBaseLineCorePaletteLightScheme.background),
       elevation: appElevation,
       unselectedLabelTextStyle: appMaterialLightUnselectedLabelStyle,
       selectedLabelTextStyle: appMaterialLightSelectedLabelStyle,
@@ -23,7 +24,7 @@ NavigationRailThemeData appMaterialLightNavRailThemeData =
 
 NavigationRailThemeData appMaterialDarkNavRailThemeData =
     NavigationRailThemeData(
-  backgroundColor: appMaterialDarkScheme.background as Color,
+  backgroundColor: Color(appSystemBaseLineCorePaletteDarkScheme.background),
   elevation: appElevation,
   unselectedLabelTextStyle: appMaterialDarkUnselectedLabelStyle,
   selectedLabelTextStyle: appMaterialDarkSelectedLabelStyle,
@@ -34,7 +35,7 @@ NavigationRailThemeData appMaterialDarkNavRailThemeData =
 
 NavigationRailThemeData appCupertinoNavRailThemeData =
     NavigationRailThemeData(
-  backgroundColor: appCupertinoScheme.background as Color,
+  backgroundColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.background),
   elevation:appElevation,
   unselectedLabelTextStyle: appCupertinoUnselectedLabelStyle,
   selectedLabelTextStyle: appCupertinoSelectedLabelStyle,

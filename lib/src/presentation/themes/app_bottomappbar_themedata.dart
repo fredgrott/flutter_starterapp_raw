@@ -3,20 +3,21 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 BottomAppBarTheme appMaterialLightBottomAppBarTheme = BottomAppBarTheme(
-  color: appMaterialLightScheme.background as Color,
+  color: Color(appSystemBaseLineCorePaletteLightScheme.background),
   elevation: appElevation,
 );
 
 BottomAppBarTheme appMaterialDarkBottomAppBarTheme = BottomAppBarTheme(
-  color: appMaterialDarkScheme.background as Color,
+  color: Color(appSystemBaseLineCorePaletteDarkScheme.background),
   elevation: appElevation,
 );
 
 BottomAppBarTheme appCupertinoBottomAppBarTheme = BottomAppBarTheme(
-  color: appCupertinoScheme.background as Color,
+  color: Color(appSystemBaseLineCorePaletteCupertinoScheme.background),
   elevation: appElevation,
 );

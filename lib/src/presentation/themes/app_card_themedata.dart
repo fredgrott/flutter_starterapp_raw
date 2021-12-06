@@ -3,13 +3,14 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 CardTheme appMaterialLightCardTheme = CardTheme(
   clipBehavior: Clip.antiAlias,
-  color: appMaterialLightScheme.inverseSurface as Color,
-  shadowColor: appMaterialLightScheme.shadow as Color,
+  color: Color(appSystemBaseLineCorePaletteLightScheme.inverseSurface),
+  shadowColor: Color(appSystemBaseLineCorePaletteLightScheme.shadow),
   elevation: appElevation,
   margin: EdgeInsetsGeometry.infinity,
   shape: const RoundedRectangleBorder(
@@ -19,8 +20,8 @@ CardTheme appMaterialLightCardTheme = CardTheme(
 
 CardTheme appMaterialDarkCardTheme = CardTheme(
   clipBehavior: Clip.antiAlias,
-  color: appMaterialDarkScheme.inverseSurface as Color,
-  shadowColor: appMaterialDarkScheme.shadow as Color,
+  color: Color(appSystemBaseLineCorePaletteDarkScheme.inverseSurface),
+  shadowColor: Color(appSystemBaseLineCorePaletteDarkScheme.shadow),
   elevation: appElevation,
   margin: EdgeInsetsGeometry.infinity,
   shape: const RoundedRectangleBorder(
@@ -30,8 +31,8 @@ CardTheme appMaterialDarkCardTheme = CardTheme(
 
 CardTheme appCupertinoCardTheme = CardTheme(
   clipBehavior: Clip.antiAlias,
-  color: appCupertinoScheme.inverseSurface as Color,
-  shadowColor: appCupertinoScheme.shadow as Color,
+  color: Color(appSystemBaseLineCorePaletteCupertinoScheme.inverseSurface),
+  shadowColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.shadow),
   elevation: appElevation,
   margin: EdgeInsetsGeometry.infinity,
   shape: const RoundedRectangleBorder(

@@ -9,9 +9,8 @@ import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:flutter_starterapp_raw/src/domain/infrastructure/app_widget_keys.dart';
 import 'package:flutter_starterapp_raw/src/presentation/features/home/ui/sampleitem_listview.dart';
 import 'package:flutter_starterapp_raw/src/presentation/features/settings/controllers/settings_controller.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_colorscheme_ext.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_text_theme_ext.dart';
-
 import 'package:lifecycle/lifecycle.dart';
 
 class SettingsView extends StatelessWidget {
@@ -52,6 +51,10 @@ class SettingsView extends StatelessWidget {
                    ),
           ),
           leading: PlatformIconButton(
+            color: platformThemeData(
+              context, 
+              material: (data) => data.ownColor().appPrimary, 
+              cupertino: (data) => data.ownColor().appPrimary,),
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
                 // Navigate to the settings page. If the user leaves and returns
@@ -74,8 +77,8 @@ class SettingsView extends StatelessWidget {
             decoration: BoxDecoration(
               color: platformThemeData(
                 context, 
-                material: (data) => Color(appSurfaceVariantLight) , 
-                cupertino: (data) => Color(appCupertinoSurfaceVariant.value) ,),
+                material: (data) => data.ownColor().appSurfaceVariant , 
+                cupertino: (data) => data.ownColor().appSurfaceVariant ,),
               borderRadius: const BorderRadius.all(Radius.circular(20)),
             ),
             child: DropdownButton<ThemeMode>(
@@ -90,8 +93,9 @@ class SettingsView extends StatelessWidget {
                     'System Theme',
                   style: platformThemeData(
                      context,
-                     material: (data) => data.own().appLabelLarge,
-                     cupertino: (data) => data.own().appLabelLarge,
+                     material: (data) => data.own().appLabelLarge?.copyWith(color: data.ownColor().appOnSurfaceVariant),
+                     cupertino: (data) => data.own().appLabelLarge?.copyWith(
+                          color: data.ownColor().appOnSurfaceVariant,),
                    ),
                   ),
                 ),
@@ -101,8 +105,10 @@ class SettingsView extends StatelessWidget {
                     'Light Theme',
                   style: platformThemeData(
                      context,
-                     material: (data) => data.own().appLabelLarge,
-                     cupertino: (data) => data.own().appLabelLarge,
+                     material: (data) => data.own().appLabelLarge?.copyWith(
+                          color: data.ownColor().appOnSurfaceVariant,),
+                     cupertino: (data) => data.own().appLabelLarge?.copyWith(
+                          color: data.ownColor().appOnSurfaceVariant,),
                    ),),
                 ),
                 DropdownMenuItem(
@@ -111,8 +117,10 @@ class SettingsView extends StatelessWidget {
                     'Dark Theme',
                   style: platformThemeData(
                      context,
-                     material: (data) => data.own().appLabelLarge,
-                     cupertino: (data) => data.own().appLabelLarge,
+                     material: (data) => data.own().appLabelLarge?.copyWith(
+                          color: data.ownColor().appOnSurfaceVariant,),
+                     cupertino: (data) => data.own().appLabelLarge?.copyWith(
+                          color: data.ownColor().appOnSurfaceVariant,),
                    ),),
                 ),
               ],

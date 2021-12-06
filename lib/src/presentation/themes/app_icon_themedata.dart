@@ -3,20 +3,21 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 IconThemeData appMaterialLightIconThemeData = IconThemeData(
-  color: appMaterialLightScheme.primary as Color,
+  color: Color(appSystemBaseLineCorePaletteLightScheme.primary),
   size: appIconSize,
 );
 
 IconThemeData appMaterialDarkIconThemeData = IconThemeData(
-  color: appMaterialDarkScheme.primary as Color,
+  color: Color(appSystemBaseLineCorePaletteDarkScheme.primary),
   size: appIconSize,
 );
 
 IconThemeData appCupertinoIconThemeData = IconThemeData(
-  color: appCupertinoScheme.primary as Color,
+  color: Color(appSystemBaseLineCorePaletteCupertinoScheme.primary),
   size: appIconSize,
 );

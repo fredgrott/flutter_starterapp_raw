@@ -73,7 +73,7 @@ class AppThemeDataTextThemeFields {
 }
 
 extension AppTextThemeExt on ThemeData {
-  static final Map<TextTheme, AppThemeDataTextThemeFields> _own = {};
+  static final Map<NavigationRailThemeData, AppThemeDataTextThemeFields> _own = {};
 
   void addThemeDataTextFields(AppThemeDataTextThemeFields own) {
     // Theme.of() and thus platformThemeData builder ref wil be anew instance so I need to
@@ -82,14 +82,14 @@ extension AppTextThemeExt on ThemeData {
     //
     // A whole betern than implementing the ThemeData or other interfaces and thus directly
     // coupling to any SDK changes ocurring per each SDK update.
-    _own[this.textTheme] = own;
+    _own[this.navigationRailTheme] = own;
   }
 
   // ignore: avoid_init_to_null
   static AppThemeDataTextThemeFields? empty = null;
 
   AppThemeDataTextThemeFields own() {
-    final o = _own[this.textTheme];
+    final o = _own[this.navigationRailTheme];
     if (o == null) {
       empty ??= AppThemeDataTextThemeFields.empty();
     }

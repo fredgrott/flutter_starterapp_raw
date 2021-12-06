@@ -75,7 +75,7 @@ class SampleItemListView extends StatelessWidget {
               CupertinoNavigationBarData(
             // Issue with cupertino where a bar with no transparency
             // will push the list down. Adding some alpha value fixes it (in a hacky way)
-            backgroundColor: Colors.blue.withAlpha(254),
+            //backgroundColor: Colors.blue.withAlpha(254),
           ),
         ),
         // If we look at the examples that are now live and linked
@@ -102,6 +102,7 @@ class SampleItemListView extends StatelessWidget {
                       onLifecycleEvent: (LifecycleEvent event) {
                         log('DatailsPage(item$index)#${event.toString()}');
                       },
+                      // ignore: avoid_redundant_argument_values
                       wantKeepAlive: false,
                       child: ListTile(
                         key: listTileKey,

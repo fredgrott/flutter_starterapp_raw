@@ -3,17 +3,18 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 
 
 TextStyle appMaterialLightSelectedLabelStyle = TextStyle(
-  color: appMaterialLightScheme.tertiary as Color,
+  color: Color(appSystemBaseLineCorePaletteLightScheme.tertiary),
 );
 
 TextStyle appMaterialDarkSelectedLabelStyle = TextStyle(
-  color: appMaterialDarkScheme.tertiary as Color,
+  color: Color(appSystemBaseLineCorePaletteDarkScheme.tertiary),
 );
 
 TextStyle appCupertinoSelectedLabelStyle = TextStyle(
-  color: appCupertinoScheme.tertiary as Color,
+  color: Color(appSystemBaseLineCorePaletteCupertinoScheme.tertiary),
 );

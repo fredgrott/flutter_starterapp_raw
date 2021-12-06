@@ -3,19 +3,20 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 
 IconThemeData appMaterialLightUnselectedIconThemeData = IconThemeData(
-  color: appMaterialLightScheme.secondary as Color,
+  color: Color(appSystemBaseLineCorePaletteDarkScheme.secondary),
   size: 32,
 );
 
 IconThemeData appMaterialDarkUnselectedIconThemeData = IconThemeData(
-  color: appMaterialDarkScheme.secondary as Color,
+  color: Color(appSystemBaseLineCorePaletteDarkScheme.secondary),
   size: 32,
 );
 
 IconThemeData appCupertinoUnselectedIconThemeData = IconThemeData(
-  color: appCupertinoScheme.secondary as Color,
+  color: Color(appSystemBaseLineCorePaletteCupertinoScheme.secondary),
   size: 32,
 );

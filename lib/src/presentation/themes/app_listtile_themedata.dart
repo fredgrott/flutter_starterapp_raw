@@ -3,7 +3,8 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 
 
 ListTileThemeData appMaterialLightListTileThemeData = ListTileThemeData(
@@ -11,12 +12,12 @@ ListTileThemeData appMaterialLightListTileThemeData = ListTileThemeData(
   shape: const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(Radius.circular(10)),
   ),
-  iconColor: appMaterialLightScheme.primary as Color,
-  textColor: appMaterialLightScheme.tertiary as Color,
+  iconColor: Color(appSystemBaseLineCorePaletteLightScheme.primary),
+  textColor: Color(appSystemBaseLineCorePaletteLightScheme.tertiary),
   contentPadding: EdgeInsetsGeometry.infinity,
-  tileColor: appMaterialLightScheme.surfaceVariant as Color,
-  selectedTileColor: appMaterialLightScheme.primaryContainer as Color,
-  selectedColor: appMaterialLightScheme.secondary as Color,
+  tileColor: Color(appSystemBaseLineCorePaletteLightScheme.surfaceVariant),
+  selectedTileColor: Color(appSystemBaseLineCorePaletteLightScheme.primaryContainer),
+  selectedColor: Color(appSystemBaseLineCorePaletteLightScheme.secondary),
   horizontalTitleGap: 1,
   minVerticalPadding: 1,
   minLeadingWidth: 1,
@@ -28,12 +29,12 @@ ListTileThemeData appMaterialDarkListTileThemeData = ListTileThemeData(
   shape: const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(Radius.circular(10)),
   ),
-  iconColor: appMaterialDarkScheme.primary as Color,
-  textColor: appMaterialDarkScheme.tertiary as Color,
+  iconColor: Color(appSystemBaseLineCorePaletteDarkScheme.primary),
+  textColor: Color(appSystemBaseLineCorePaletteDarkScheme.tertiary),
   contentPadding: EdgeInsetsGeometry.infinity,
-  tileColor: appMaterialDarkScheme.surfaceVariant as Color,
-  selectedTileColor: appMaterialDarkScheme.primaryContainer as Color,
-  selectedColor: appMaterialDarkScheme.secondary as Color,
+  tileColor: Color(appSystemBaseLineCorePaletteDarkScheme.surfaceVariant),
+  selectedTileColor: Color(appSystemBaseLineCorePaletteDarkScheme.primaryContainer),
+  selectedColor: Color(appSystemBaseLineCorePaletteDarkScheme.secondary),
   horizontalTitleGap: 1,
   minVerticalPadding: 1,
   minLeadingWidth: 1,
@@ -45,12 +46,12 @@ ListTileThemeData appCupertinoListTileThemeData = ListTileThemeData(
   shape: const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(Radius.circular(10)),
   ),
-  iconColor: appCupertinoScheme.primary as Color,
-  textColor: appCupertinoScheme.tertiary as Color,
+  iconColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.primary),
+  textColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.tertiary),
   contentPadding: EdgeInsetsGeometry.infinity,
-  tileColor: appCupertinoScheme.surfaceVariant as Color,
-  selectedTileColor: appCupertinoScheme.primaryContainer as Color,
-  selectedColor: appCupertinoScheme.secondary as Color,
+  tileColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.surfaceVariant),
+  selectedTileColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.primaryContainer),
+  selectedColor: Color(appSystemBaseLineCorePaletteLightScheme.secondary),
   horizontalTitleGap: 1,
   minVerticalPadding: 1,
   minLeadingWidth: 1,

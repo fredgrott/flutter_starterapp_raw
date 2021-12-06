@@ -3,10 +3,26 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'app_text_theme_ext.dart';
 
-TextTheme appMaterialLightTextTheme = const TextTheme();
+// Gist: Sometiems when use field xtensions on themedata we need
+//       a usefull NOOP as it has otbenon full for the xt to add the
+//       fields. This is a non-null NOOP to allow injecting of text style fields in
+//       themedata.
 
-TextTheme appMaterialDarkTextTheme = const TextTheme();
+TextTheme appMaterialLightTextTheme = const TextTheme(
+  headline1: TextStyle(
+    fontWeight: FontWeight.normal,
+  ),
+);
 
-TextTheme appCupertinoTextTheme = const TextTheme();
+TextTheme appMaterialDarkTextTheme = const TextTheme(
+  headline1: TextStyle(
+    fontWeight: FontWeight.normal,
+  ),
+);
+
+TextTheme appCupertinoTextTheme = const TextTheme(
+  headline1: TextStyle(
+    fontWeight: FontWeight.normal,
+  ),
+);

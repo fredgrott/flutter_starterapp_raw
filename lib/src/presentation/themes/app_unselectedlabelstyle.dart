@@ -3,16 +3,17 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 
 TextStyle appMaterialLightUnselectedLabelStyle = TextStyle(
-  color: appMaterialLightScheme.secondary as Color,
+  color: Color(appSystemBaseLineCorePaletteLightScheme.secondary),
 );
 
 TextStyle appMaterialDarkUnselectedLabelStyle = TextStyle(
-  color: appMaterialDarkScheme.secondary as Color,
+  color: Color(appSystemBaseLineCorePaletteDarkScheme.secondary),
 );
 
 TextStyle appCupertinoUnselectedLabelStyle = TextStyle(
-  color: appCupertinoScheme.secondary as Color,
+  color: Color(appSystemBaseLineCorePaletteCupertinoScheme.secondary),
 );

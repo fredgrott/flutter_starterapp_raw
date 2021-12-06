@@ -8,18 +8,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppColorSchemeColorFields {
+  final Color? appPrimary;
   final Color? appOnPrimary;
   final Color? appOnPrimaryContainer;
+  final Color? appSecondary;
   final Color? appOnSecondary;
   final Color? appOnSecondaryContainer;
   final Color? appTertiary;
   final Color? appOnTertiary;
   final Color? appTertiaryContainer;
   final Color? appOnTertiaryContainer;
+  final Color? appError;
   final Color? appOnError;
   final Color? appErrorContainer;
   final Color? appOnErrorContainer;
+  final Color? appBackground;
   final Color? appOnBackground;
+  final Color? appSurface;
   final Color? appOnSurface;
   final Color? appSurfaceVariant;
   final Color? appOnSurfaceVariant;
@@ -42,6 +47,8 @@ class AppColorSchemeColorFields {
   final Color? appSemanticThreeOnPrimaryContainer;
 
   const AppColorSchemeColorFields({
+    Color? appPrimary,
+    Color? appSecondary,
     Color? appOnPrimary,
     Color? appOnPrimaryContainer,
     Color? appOnSecondary,
@@ -50,10 +57,13 @@ class AppColorSchemeColorFields {
     Color? appOnTertiary,
     Color? appTertiaryContainer,
     Color? appOnTertiaryContainer,
+    Color? appError,
     Color? appOnError,
     Color? appErrorContainer,
     Color? appOnErrorContainer,
+    Color? appBackground,
     Color? appOnBackground,
+    Color? appSurface,
     Color? appOnSurface,
     Color? appSurfaceVariant,
     Color? appOnSurfaceVariant,
@@ -74,18 +84,23 @@ class AppColorSchemeColorFields {
     Color? appSemanticThreeOnPrimary,
     Color? appSemanticThreePrimaryContainer,
     Color? appSemanticThreeOnPrimaryContainer,
-  })  : this.appOnPrimary = appOnPrimary,
+  })  : this.appPrimary = appPrimary,
+        this.appOnPrimary = appOnPrimary,
         this.appOnPrimaryContainer = appOnPrimaryContainer,
+        this.appSecondary = appSecondary,
         this.appOnSecondary = appOnSecondary,
         this.appOnSecondaryContainer = appOnSecondaryContainer,
         this.appTertiary = appTertiary,
         this.appOnTertiary = appOnTertiary,
         this.appTertiaryContainer = appTertiaryContainer,
         this.appOnTertiaryContainer = appOnTertiaryContainer,
+        this.appError = appError,
         this.appOnError = appOnError,
         this.appErrorContainer = appErrorContainer,
         this.appOnErrorContainer = appOnErrorContainer,
+        this.appBackground = appBackground,
         this.appOnBackground = appOnBackground,
+        this.appSurface = appSurface,
         this.appOnSurface = appOnSurface,
         this.appSurfaceVariant = appSurfaceVariant,
         this.appOnSurfaceVariant = appOnSurfaceVariant,
@@ -108,7 +123,8 @@ class AppColorSchemeColorFields {
         this.appSemanticThreeOnPrimary = appSemanticThreeOnPrimary,
         this.appSemanticThreePrimaryContainer =
             appSemanticThreePrimaryContainer,
-        this.appSemanticThreeOnPrimaryContainer = appSemanticThreeOnPrimaryContainer;
+        this.appSemanticThreeOnPrimaryContainer =
+            appSemanticThreeOnPrimaryContainer;
 
   factory AppColorSchemeColorFields.empty() {
     return const AppColorSchemeColorFields();
@@ -136,14 +152,26 @@ extension AppColorSchemeExt on ThemeData {
 extension AppColorSchemeCupertinoExt on CupertinoThemeData {
   static final Map<Color, AppColorSchemeColorFields> _own = {};
 
+  // gist: CupertinoThemeData has less fields than ThemeData but 
+  //       we are mapping to materailbased cupertino theme data so 
+  //       we need something from CupertinoThemeData that 
+  //       we know we have set in Material ThemeData for 
+  //       Cupertino and in this case its scaffoldBackgroundColor 
+  //       which happens to have the type we need which is Color.
+  //
+  //       Note, this leaves only two types of fields we can extend 
+  //       theme data with which is Color and TextStyle as the limiting 
+  //       factor is the allowed parameters in the smaller 
+  //      Cupertino Theme Data.
+
   void addColorSchemeColorFields(AppColorSchemeColorFields own) {
-    _own[this.primaryColor] = own;
+    _own[this.scaffoldBackgroundColor] = own;
   }
 
   static AppColorSchemeColorFields? empty = null;
 
   AppColorSchemeColorFields ownColor() {
-    final o = _own[this.primaryColor];
+    final o = _own[this.scaffoldBackgroundColor];
     if (o == null) {
       empty ??= AppColorSchemeColorFields.empty();
     }

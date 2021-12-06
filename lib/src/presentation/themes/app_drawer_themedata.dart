@@ -3,23 +3,24 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
 
 DrawerThemeData appMaterialLightDrawerThemeData = DrawerThemeData(
-  backgroundColor: appMaterialLightScheme.surfaceVariant as Color,
-  scrimColor: appMaterialLightScheme.surface as Color,
+  backgroundColor: Color(appSystemBaseLineCorePaletteLightScheme.surfaceVariant),
+  scrimColor: Color(appSystemBaseLineCorePaletteLightScheme.surface),
   elevation: appElevation,
 );
 
 DrawerThemeData appMaterialDarkDrawerThemeData = DrawerThemeData(
-  backgroundColor: appMaterialDarkScheme.surfaceVariant as Color,
-  scrimColor: appMaterialDarkScheme.surface as Color,
+  backgroundColor: Color(appSystemBaseLineCorePaletteDarkScheme.surfaceVariant),
+  scrimColor: Color(appSystemBaseLineCorePaletteDarkScheme.surface),
   elevation: appElevation,
 );
 
 DrawerThemeData appCupertinoDrawerThemeData = DrawerThemeData(
-  backgroundColor: appCupertinoScheme.surfaceVariant as Color,
-  scrimColor: appCupertinoScheme.surface as Color,
+  backgroundColor: Color(appSystemBaseLineCorePaletteLightScheme.surfaceVariant),
+  scrimColor: Color(appSystemBaseLineCorePaletteLightScheme.surface),
   elevation: appElevation,
 );

@@ -3,7 +3,8 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_selected_icon_themedata.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_selectedlabelstyle.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_theme_vars.dart';
@@ -14,7 +15,7 @@ import 'package:flutter_starterapp_raw/src/presentation/themes/app_unselectedlab
 
 BottomNavigationBarThemeData appMaterialLightBottomNavBarThemeData =
     BottomNavigationBarThemeData(
-      backgroundColor: appMaterialLightScheme.background as Color,
+      backgroundColor: Color(appSystemBaseLineCorePaletteLightScheme.background),
       elevation: appElevation,
       selectedIconTheme: appMaterialLightSelectedIconThemeData,
       unselectedIconTheme: appMaterialLightUnselectedIconThemeData,
@@ -24,14 +25,14 @@ BottomNavigationBarThemeData appMaterialLightBottomNavBarThemeData =
       landscapeLayout: BottomNavigationBarLandscapeLayout.centered,
       enableFeedback: true,
       selectedLabelStyle: appMaterialLightSelectedLabelStyle,
-      selectedItemColor: appMaterialLightScheme.primaryContainer as Color,
-      unselectedItemColor: appMaterialLightScheme.secondaryContainer as Color,
+      selectedItemColor: Color(appSystemBaseLineCorePaletteLightScheme.primaryContainer),
+      unselectedItemColor: Color(appSystemBaseLineCorePaletteLightScheme.secondaryContainer),
       unselectedLabelStyle: appMaterialLightUnselectedLabelStyle,
     );
 
 BottomNavigationBarThemeData appMaterialDarkBottomNavBarThemeData =
     BottomNavigationBarThemeData(
-  backgroundColor: appMaterialDarkScheme.background as Color,
+  backgroundColor: Color(appSystemBaseLineCorePaletteDarkScheme.background),
   elevation: appElevation,
   selectedIconTheme: appMaterialDarkSelectedIconThemeData,
   unselectedIconTheme: appMaterialDarkUnselectedIconThemeData,
@@ -41,14 +42,14 @@ BottomNavigationBarThemeData appMaterialDarkBottomNavBarThemeData =
   landscapeLayout: BottomNavigationBarLandscapeLayout.centered,
   enableFeedback: true,
   selectedLabelStyle: appMaterialDarkSelectedLabelStyle,
-  selectedItemColor: appMaterialDarkScheme.primaryContainer as Color,
-  unselectedItemColor: appMaterialDarkScheme.secondaryContainer as Color,
+  selectedItemColor: Color(appSystemBaseLineCorePaletteDarkScheme.primaryContainer),
+  unselectedItemColor: Color(appSystemBaseLineCorePaletteLightScheme.secondaryContainer),
   unselectedLabelStyle: appMaterialDarkUnselectedLabelStyle,
 );
 
 BottomNavigationBarThemeData appCupertinoBottomNavBarThemeData =
     BottomNavigationBarThemeData(
-  backgroundColor: appCupertinoScheme.background as Color,
+  backgroundColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.background),
   elevation: appElevation,
   selectedIconTheme: appCupertinoSelectedIconThemeData,
   unselectedIconTheme: appCupertinoUnselectedIconThemeData,
@@ -58,7 +59,7 @@ BottomNavigationBarThemeData appCupertinoBottomNavBarThemeData =
   landscapeLayout: BottomNavigationBarLandscapeLayout.centered,
   enableFeedback: true,
   selectedLabelStyle: appCupertinoSelectedLabelStyle,
-  selectedItemColor: appCupertinoScheme.primaryContainer as Color,
-  unselectedItemColor: appCupertinoScheme.secondaryContainer as Color,
+  selectedItemColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.primaryContainer),
+  unselectedItemColor: Color(appSystemBaseLineCorePaletteLightScheme.secondaryContainer),
   unselectedLabelStyle: appCupertinoUnselectedLabelStyle,
 );

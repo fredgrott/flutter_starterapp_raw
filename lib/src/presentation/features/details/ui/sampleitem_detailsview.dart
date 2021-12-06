@@ -28,6 +28,7 @@ class SampleItemDetailsView extends StatelessWidget {
         widgetKey: scaffoldKey,
         appBar: PlatformAppBar(
           leading: PlatformIconButton(
+            
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
                 // Navigate to the settings page. If the user leaves and returns

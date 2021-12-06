@@ -4,7 +4,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_actions_icon_themedata.dart';
-import 'package:flutter_starterapp_raw/src/presentation/themes/app_colors.dart';
+import 'package:flutter_starterapp_raw/src/presentation/themes/app_color_system_base_line.dart';
+
 
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_colorschemes.dart';
 import 'package:flutter_starterapp_raw/src/presentation/themes/app_icon_themedata.dart';
@@ -15,13 +16,13 @@ AppBarTheme appMaterialLightAppBarTheme = AppBarTheme(
   //color: appMaterialLightColorScheme.background,
   backgroundColor: appMaterialLightColorScheme.background,
   // foreground will be text color which needs the tertiary color
-  foregroundColor: appMaterialLightScheme.tertiary as Color,
+  foregroundColor: Color(appSystemBaseLineCorePaletteLightScheme.tertiary),
   elevation: appElevation,
-  shadowColor: appMaterialLightScheme.shadow as Color,
+  shadowColor: Color(appSystemBaseLineCorePaletteLightScheme.shadow),
   centerTitle: true,
   //textTheme:
-  titleTextStyle: appAppBarTextStyle,
-  toolbarTextStyle: appAppBarToolbarTextStyle,
+  //titleTextStyle: appAppBarTextStyle,
+  //toolbarTextStyle: appAppBarToolbarTextStyle,
   iconTheme: appMaterialLightIconThemeData,
   actionsIconTheme: appMaterialLightActionsIconThemeData,
 );
@@ -29,12 +30,12 @@ AppBarTheme appMaterialLightAppBarTheme = AppBarTheme(
 AppBarTheme appMaterialDarkAppBarTheme = AppBarTheme(
   backgroundColor: appMaterialDarkColorScheme.background,
   // foreground will be text color which needs the tertiary color
-  foregroundColor: appMaterialDarkScheme.tertiary as Color,
+  foregroundColor: Color(appSystemBaseLineCorePaletteDarkScheme.tertiary),
   elevation: appElevation,
-  shadowColor: appMaterialDarkScheme.shadow as Color,
+  shadowColor: Color(appSystemBaseLineCorePaletteDarkScheme.shadow),
   centerTitle: true,
-  titleTextStyle: appAppBarTextStyle,
-  toolbarTextStyle: appAppBarToolbarTextStyle,
+  //titleTextStyle: appAppBarTextStyle,
+  //toolbarTextStyle: appAppBarToolbarTextStyle,
   iconTheme: appMaterialDarkIconThemeData,
   actionsIconTheme: appMaterialDarkActionsIconThemeData,
 
@@ -43,16 +44,16 @@ AppBarTheme appMaterialDarkAppBarTheme = AppBarTheme(
 AppBarTheme appCupertinoAppBarTheme = AppBarTheme(
   backgroundColor: appCupertinoColorScheme.background,
   // foreground will be text color which needs the tertiary color
-  foregroundColor: appCupertinoScheme.tertiary as Color,
+  foregroundColor: Color(appSystemBaseLineCorePaletteCupertinoScheme.tertiary),
   elevation: appElevation,
-  shadowColor: appCupertinoScheme.shadow as Color,
+  shadowColor: Color(appSystemBaseLineCorePaletteLightScheme.shadow),
   centerTitle: true,
-  titleTextStyle: appAppBarTextStyle,
-  toolbarTextStyle: appAppBarToolbarTextStyle,
+  //titleTextStyle: appAppBarTextStyle,
+  //toolbarTextStyle: appAppBarToolbarTextStyle,
   iconTheme: appCupertinoIconThemeData,
   actionsIconTheme: appCupertinoActionsIconThemeData,
 );
 
-TextStyle appAppBarTextStyle = TextStyle();
+//TextStyle appAppBarTextStyle = TextStyle();
 
-TextStyle appAppBarToolbarTextStyle = TextStyle();
+//TextStyle appAppBarToolbarTextStyle = TextStyle();
